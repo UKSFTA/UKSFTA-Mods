@@ -51,7 +51,7 @@ jobs:
         path: releases
     - uses: softprops/action-gh-release@v1
       with:
-        files: 'releases/uksfta-${{ env.VERSION }}-*.zip'
+        files: 'releases/uksf taskforce alpha_${{ env.VERSION }}*.zip'
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
