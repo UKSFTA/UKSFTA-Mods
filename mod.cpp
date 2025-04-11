@@ -1,5 +1,5 @@
 ﻿dir = "@UKSFTA";
-name = "UKSF Taskforce Alpha Custom Content";
+name = "UKSF Taskforce Alpha Mods";
 
 author = "UKSF Taskforce Alpha Team";
 
@@ -14,7 +14,7 @@ logoOver        = "icon_128_highlight_ca.paa"; // When the mouse is over, in the
 //tooltipOwned    = "Who sold this to you?";  // Tool tip displayed when the mouse is left over, in the main menu
 overview        = "UKSF Taskforce Alpha";         // Overview text, displayed from the extension menu
 //description     = "It's unclear where this will show"; // Probably in context with action
-action          = "https://www.ehre.to";    // Website URL, that can accessed from the expansions menu 
+action          = "https://uksfta.github.io/";    // Website URL, that can accessed from the expansions menu 
 //actionName      = "today?";                 // label of button/tooltip in extension menu
 
 // Color used for DLC stripes and backgrounds (RGBA)
