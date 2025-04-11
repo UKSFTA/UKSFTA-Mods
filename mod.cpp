@@ -1,7 +1,7 @@
-dir = "@UKSFTA";
+﻿dir = "@UKSFTA";
 name = "UKSF Taskforce Alpha Custom Content";
 
-author = "UKSF Taskforce Alpha";
+author = "UKSF Taskforce Alpha Team";
 
 //picture         = "title_co.paa";           // Picture displayed from the expansions menu. Optimal size is 2048x1024
 //hideName        = "false";                  // Hide the extension name
