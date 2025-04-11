@@ -42,7 +42,7 @@ class CfgUnitInsignia {
     class ALTCOL {
         displayName = "Army - Lt. Col.";
         author = "Maj. S. Woods.";
-        texture = "z\uksfta\addons\patches\Textures\army\off\army-lt_col_patch_co.paa";
+        texture = "z\uksfta\addons\patches\Textures\army\off\army-ltcol_patch_co.paa";
         textureVehicle = "";
     };
     class AMAJ {
@@ -102,7 +102,7 @@ class CfgUnitInsignia {
     class NLT {
         displayName = "Navy - Lt.";
         author = "Maj. S. Woods.";
-        texture = "z\uksfta\addons\patches\Textures\navy\jncos\navy-lt_patch_co.paa";
+        texture = "z\uksfta\addons\patches\Textures\navy\off\navy-lt_patch_co.paa";
         textureVehicle = "";
     };
     class NLTCDR {
@@ -240,7 +240,7 @@ class CfgUnitInsignia {
     class RMACR {
         displayName = "RAF - Mag. Cr.";
         author = "Maj. S. Woods.";
-        texture = "z\uksfta\addons\patches\Textures\raf\wos\raf-magcr_patch_co.paa";
+        texture = "z\uksfta\addons\patches\Textures\raf\wos\raf-macr_patch_co.paa";
         textureVehicle = "";
     };
     class RWO {
