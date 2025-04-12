@@ -197,7 +197,7 @@ class CfgUnitInsignia {
     };
     class RAM {
         displayName = "RAF - AM.";
-        author = "REDCoat Media;
+        author = "REDCoat Media";
         texture = "z\uksfta\addons\patches\Textures\raf\ors\raf-am_patch_co.paa";
         textureVehicle = "";
     };
