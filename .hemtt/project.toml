@@ -13,6 +13,9 @@ include = [
     "LICENSE",
     "meta.cpp",
 ]
+exclude = [
+    "addons/weapons",
+]
 
 [version]
 major = 1
