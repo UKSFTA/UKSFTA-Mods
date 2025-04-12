@@ -51,7 +51,7 @@ jobs:
         path: releases
     - uses: softprops/action-gh-release@v1
       with:
-        files: 'releases/uksf taskforce alpha_${{ env.VERSION }}*.zip'
+        files: 'releases/uksf taskforce alpha mods_${{ env.VERSION }}*.zip'
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -62,7 +62,7 @@ jobs:
         path: .hemttout
     - uses: arma-actions/workshop-upload@v1
       with:
-        itemId: '3425013328' # Id of item to update
+        itemId: '3462905403' # Id of item to update
         contentPath: '.hemttout/release'
         changelog: 'https://github.com/UKSFTA/UKSFTA-Mods/releases/tag/v${{ env.VERSION }}'
       env:
