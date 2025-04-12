@@ -1,3 +1,17 @@
+class CfgMods {
+    action = "https://uksfta.github.io/";
+    actionName = "Website";
+    author = "UKSF Taskforce Alpha Team";
+    logo = "z\uksfta\addons\main\data\icon_128_ca.paa";
+    logoOver = "z\uksfta\addons\main\data\icon_128_highlight_ca.paa";
+    logoSmall = "z\uksfta\addons\main\data\icon_64_ca.paa";
+    name = "UKSF Taskforce Alpha Mods";
+    overview = "UKSF Taskforce Alpha";
+    picture = "z\uksfta\addons\main\data\title_co.paa";
+    tooltip = "UKSFTA";
+    tooltipOwned = "UKSF Taskforce Alpha";
+};
+
 class CfgPatches {
     class Ammo {
         authors[] = {"Jack","Matt"};
@@ -8,19 +22,14 @@ class CfgPatches {
         };
         requiredVersion = 1.56;
         units[] = {};
-        weapons[] = {
-            "UKSF_KS1_B",
-            "UKSF_KS1_D",
-            "UKSF_MCX"
-        };
+        weapons[] = {};
     };
 };
 
 class CfgWeapons {
-    class SF_L403A1_B;
-    class UKSF_KS1_B: SF_L403A1_B {
+    class SF_L119_BASE;
+    class SF_L403A1_B: SF_L119_BASE {
         displayName = "[UKSF] KS-1 Black";
-        author = "Jack";
         magazines[] = {
             "rhs_mag_30Rnd_556x45_M855_Stanag",
             "rhs_mag_30Rnd_556x45_M855_Stanag_Tracer_Red",
@@ -45,11 +54,8 @@ class CfgWeapons {
             "UK3CB_BAF_556_30Rnd_T"
         };
     };
-
-    class SF_L403A1_D;
-    class UKSF_KS1_D: SF_L403A1_D {
+    class SF_L403A1_D: SF_L403A1_B {
         displayName = "[UKSF] KS-1 Desert";
-        author = "Jack";
         magazines[] = {
             "rhs_mag_30Rnd_556x45_M855_Stanag",
             "rhs_mag_30Rnd_556x45_M855_Stanag_Tracer_Red",
@@ -74,11 +80,8 @@ class CfgWeapons {
             "UK3CB_BAF_556_30Rnd_T"
         };
     };
-
-    class SF_SIG_MCX;
-    class UKSF_MCX: SF_SIG_MCX {
-        displayName = "[UKSF] MCX";
-        author = "Jack";
+    class SF_SIG_MCX: SF_L119_BASE {
+        displayName = "[UKSF] MCX Black";
         magazines[] = {
             "rhs_mag_30Rnd_556x45_M855_Stanag",
             "rhs_mag_30Rnd_556x45_M855_Stanag_Tracer_Red",
