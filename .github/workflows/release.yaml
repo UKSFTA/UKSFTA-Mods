@@ -23,14 +23,14 @@ jobs:
       run: |
         docker run -v "$(pwd):c:/workdir" -e CI=$True ghcr.io/armaforces/arma3tools:v2 hemtt release
 
-    - uses: actions/upload-artifact@c67f4072afa7c23abfdd4427889b17beb9390a6c # Explicit SHA
+    - uses: actions/upload-artifact@v4 
       with:
         name: hemttout
         path: .hemttout/
         if-no-files-found: error
         retention-days: 1
 
-    - uses: actions/upload-artifact@c67f4072afa7c23abfdd4427889b17beb9390a6c # Explicit SHA
+    - uses: actions/upload-artifact@v4 
       with:
         name: releases
         path: releases/
@@ -45,7 +45,7 @@ jobs:
       run: echo VERSION=${GITHUB_REF:11} >> $GITHUB_ENV
 
     # Upload to GitHub
-    - uses: actions/download-artifact@c67f4072afa7c23abfdd4427889b17beb9390a6c # Explicit SHA
+    - uses: actions/download-artifact@v4 
       with:
         name: releases
         path: releases
@@ -56,7 +56,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     # Upload to Steam Workshop
-    - uses: actions/download-artifact@c67f4072afa7c23abfdd4427889b17beb9390a6c # Explicit SHA
+    - uses: actions/download-artifact@v4 
       with:
         name: hemttout
         path: .hemttout
