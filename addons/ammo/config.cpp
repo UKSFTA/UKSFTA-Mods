@@ -108,8 +108,86 @@ class CfgWeapons {
             "SF_30Rnd_762x35_SS"
         };
     };
-    class SF_L119A1_CQB: SF_L119_BASE {
-        displayName = "[UKSF] C8 SFW";
+    class SF_L119A2_SFW: SF_L119_BASE {
+        displayName = "[UKSF] C8 SFW Black";
+        magazines[] = {
+            "rhs_mag_30Rnd_556x45_M855_Stanag",
+            "rhs_mag_30Rnd_556x45_M855_Stanag_Tracer_Red",
+            "rhs_mag_30Rnd_556x45_M855_Stanag_Tracer_Green",
+            "rhs_mag_30Rnd_556x45_M855_Stanag_Tracer_Yellow",
+            "rhs_mag_30Rnd_556x45_M855_Stanag_Tracer_Orange",
+            "rhs_mag_30Rnd_556x45_M855A1_Stanag",
+            "rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",
+            "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
+            "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Green",
+            "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Yellow",
+            "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Orange",
+            "rhs_mag_30Rnd_556x45_Mk318_Stanag",
+            "rhs_mag_30Rnd_556x45_Mk262_Stanag",
+            "rhs_mag_30Rnd_556x45_M200_Stanag",
+            "30Rnd_556x45_Stanag",
+            "30Rnd_556x45_Stanag_Tracer_Red",
+            "30Rnd_556x45_Stanag_Tracer_Green",
+            "30Rnd_556x45_Stanag_Tracer_Yellow",
+            "UK3CB_BAF_556_30Rnd",
+            "UK3CB_BAF_556_30Rnd_Blank",
+            "UK3CB_BAF_556_30Rnd_T"
+        };
+    };
+    class SF_L119A2_SFW_Camo_1: SF_L119A2_SFW {
+        displayName = "[UKSF] C8 SFW Desert";
+        magazines[] = {
+            "rhs_mag_30Rnd_556x45_M855_Stanag",
+            "rhs_mag_30Rnd_556x45_M855_Stanag_Tracer_Red",
+            "rhs_mag_30Rnd_556x45_M855_Stanag_Tracer_Green",
+            "rhs_mag_30Rnd_556x45_M855_Stanag_Tracer_Yellow",
+            "rhs_mag_30Rnd_556x45_M855_Stanag_Tracer_Orange",
+            "rhs_mag_30Rnd_556x45_M855A1_Stanag",
+            "rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",
+            "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
+            "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Green",
+            "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Yellow",
+            "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Orange",
+            "rhs_mag_30Rnd_556x45_Mk318_Stanag",
+            "rhs_mag_30Rnd_556x45_Mk262_Stanag",
+            "rhs_mag_30Rnd_556x45_M200_Stanag",
+            "30Rnd_556x45_Stanag",
+            "30Rnd_556x45_Stanag_Tracer_Red",
+            "30Rnd_556x45_Stanag_Tracer_Green",
+            "30Rnd_556x45_Stanag_Tracer_Yellow",
+            "UK3CB_BAF_556_30Rnd",
+            "UK3CB_BAF_556_30Rnd_Blank",
+            "UK3CB_BAF_556_30Rnd_T"
+        };
+    };
+    class SF_L119A2_CQB: SF_L119_BASE {
+        displayName = "[UKSF] C8 CQB Black";
+        magazines[] = {
+            "rhs_mag_30Rnd_556x45_M855_Stanag",
+            "rhs_mag_30Rnd_556x45_M855_Stanag_Tracer_Red",
+            "rhs_mag_30Rnd_556x45_M855_Stanag_Tracer_Green",
+            "rhs_mag_30Rnd_556x45_M855_Stanag_Tracer_Yellow",
+            "rhs_mag_30Rnd_556x45_M855_Stanag_Tracer_Orange",
+            "rhs_mag_30Rnd_556x45_M855A1_Stanag",
+            "rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",
+            "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",
+            "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Green",
+            "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Yellow",
+            "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Orange",
+            "rhs_mag_30Rnd_556x45_Mk318_Stanag",
+            "rhs_mag_30Rnd_556x45_Mk262_Stanag",
+            "rhs_mag_30Rnd_556x45_M200_Stanag",
+            "30Rnd_556x45_Stanag",
+            "30Rnd_556x45_Stanag_Tracer_Red",
+            "30Rnd_556x45_Stanag_Tracer_Green",
+            "30Rnd_556x45_Stanag_Tracer_Yellow",
+            "UK3CB_BAF_556_30Rnd",
+            "UK3CB_BAF_556_30Rnd_Blank",
+            "UK3CB_BAF_556_30Rnd_T"
+        };
+    };
+    class SF_L119A2_CQB_Camo_1: SF_L119A2_CQB {
+        displayName = "[UKSF] C8 CQB Desert";
         magazines[] = {
             "rhs_mag_30Rnd_556x45_M855_Stanag",
             "rhs_mag_30Rnd_556x45_M855_Stanag_Tracer_Red",
