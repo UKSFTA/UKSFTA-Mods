@@ -5,6 +5,8 @@ on:
     types:
       - published
 
+permissions:
+  contents: read
 jobs:
   build_addon:
     runs-on: windows-2022
@@ -38,6 +40,9 @@ jobs:
         retention-days: 7
 
   release_addon:
+    permissions:
+      contents: write
+      packages: read
     runs-on: ubuntu-latest
     needs: build_addon
     steps:
