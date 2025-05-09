@@ -28,7 +28,7 @@ class CfgVehicles {
         };
     };
     class Banner_01_F;
-    class Banner_TFA: Banner_01_F {
+    class Banner_UKSFTA: Banner_01_F {
         displayName = "Banner (Task Force Alpha)";
         editorPreview = "z\uksfta\addons\flags\Files\preview\preview_TFA.jpg";
         hiddenSelectionsTextures[] = {"z\uksfta\addons\flags\Files\Flags\flag_tfa.paa"};
