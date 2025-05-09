@@ -1,11 +1,14 @@
 name: Arma 3 Tools
 
+permissions:
+  contents: read
+
 on:
   workflow_dispatch:
     inputs:
       toolsUrl:
-        description: URL to hosted ZIP file with Arma 3 Tools
-        required: true
+       description: URL to hosted ZIP file with Arma 3 Tools
+       required: true
 
 jobs:
   install_arma3_tools:
