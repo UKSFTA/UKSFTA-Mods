@@ -12,9 +12,7 @@ include = [
     "AUTHORS.txt",
     "LICENSE",
     "meta.cpp",
-]
-exclude = [
-    "addons/weapons",
+    "addons/*.pbo",
 ]
 
 [version]
