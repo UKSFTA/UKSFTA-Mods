@@ -17,7 +17,7 @@ sleep 1; // Wait for a moment to allow the speakers to be found and sync
 while {time < _startTime + _duration} do {
 {
 private _speaker = _x;
-playSound3d [_soundFile, _speaker, false, getPosASL _speaker, 5, 1, 0];
+playSound3D [_soundFile, _speaker, false, getPosASL _speaker, 5, 1, 0];
 } forEach _speakerObjects;
 sleep 1; // Wait for a moment before playing the sound again
 };
