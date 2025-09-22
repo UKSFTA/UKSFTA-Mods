@@ -1,1 +1,1 @@
-this addAction ["<t color='#FF0000'>Activate Alarm</t>", "scripts\scramble_alarm_logic.sqf"];
+this addAction ["<t color='#FF0000'>Load Weapon Preset To Atrag MX</t>", "scripts\import_atrag_preset.sqf"];
