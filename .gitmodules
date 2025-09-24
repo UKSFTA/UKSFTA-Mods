@@ -1,0 +1,4 @@
+[submodule "addons/scripts"]
+	path = addons/scripts
+	url = git@github.com:UKSFTA/UKSFTA-Scripts.git
+	branch = submodule
