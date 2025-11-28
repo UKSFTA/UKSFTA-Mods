@@ -1,6 +1,6 @@
 name = "UKSF Taskforce Alpha Mods"
 author = "UKSF Taskforce Alpha Team"
-prefix = "UKSFTA"
+prefix = "UKSFTA-Mods"
 mainprefix = "z"
 
 [files]
@@ -13,6 +13,9 @@ include = [
     "LICENSE",
     "meta.cpp",
     "addons/*.pbo",
+]
+exclude = [
+    "addons/scripts/*.sqf",
 ]
 
 [version]
