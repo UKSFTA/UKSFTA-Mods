@@ -7,8 +7,8 @@ hemtt.exe
 releases
 
 #Ignore vscode AI rules
+.codacy
+.crush
 .github/copilot-instructions.md
-
-
-#Ignore vscode AI rules
 .github/instructions/codacy.instructions.md
+.oc
