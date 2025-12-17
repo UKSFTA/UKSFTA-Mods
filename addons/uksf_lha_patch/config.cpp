@@ -3,7 +3,7 @@ class CfgPatches
 	class UKSFTA_LHA_Patch
 	{
 		name = "[UKSF] LHA";
-        requiredAddons[] = {"Peral_LHA","rhsusf_c_mrzr","uk3cb_baf_vehicles","vtx_factions_us","fza_ah64_weapons"};
+        requiredAddons[] = {"Peral_LHA"};
         requiredVersion = 1.60;
 		units[] = {"UKSF_LHA"};
 		weapons[] = {};
