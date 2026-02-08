@@ -1,2 +1,6 @@
 #!/bin/bash
-./build.sh release "$@"
+
+# UKSFTA Release Shortcut
+# Packages the mod and fixes timestamps.
+
+bash build.sh release "$@"

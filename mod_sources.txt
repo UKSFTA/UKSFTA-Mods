@@ -13,6 +13,7 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=2281685552 # Boat Mod | F
 
 
 [ignore]
+# List mods to exclude from download/sync below
 https://steamcommunity.com/sharedfiles/filedetails/?id=450814997 # Core | CBA_A3
 https://steamcommunity.com/sharedfiles/filedetails/?id=463939057 # Overhaul | ace
 https://steamcommunity.com/sharedfiles/filedetails/?id=843425103 # Characters | RHSAFRF
