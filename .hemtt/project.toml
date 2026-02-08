@@ -17,5 +17,8 @@ include = [
     "README.md"
 ]
 
+[archive]
+directory = "releases"
+
 workshop_id = "INSERT_ID_HERE"
 workshop_tags = ["Mod", "Addon"]
