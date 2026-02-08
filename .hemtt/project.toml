@@ -3,6 +3,9 @@ author = "UKSF Taskforce Alpha Team"
 prefix = "UKSFTA-Mods"
 mainprefix = "z"
 
+keyname = "UKSFTA"
+signame = "UKSFTA"
+
 [version]
 path = "addons/main/script_version.hpp"
 
@@ -20,5 +23,5 @@ include = [
 [archive]
 directory = "releases"
 
-workshop_id = "INSERT_ID_HERE"
+workshop_id = "3462905403"
 workshop_tags = ["Mod", "Addon"]
