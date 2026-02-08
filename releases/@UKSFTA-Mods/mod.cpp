@@ -1,9 +1,0 @@
-name = "UKSF Taskforce Alpha - Core Modpack";
-author = "UKSF Taskforce Alpha Team";
-logo = "z\uksfta\addons\main\data\icon_128_ca.paa";
-logoOver = "z\uksfta\addons\main\data\icon_128_highlight_ca.paa";
-logoSmall = "z\uksfta\addons\main\data\icon_64_ca.paa";
-overview = "UKSF Taskforce Alpha - Core Modpack. Essential functional modifications and gameplay improvements.";
-picture = "z\uksfta\addons\main\data\title_co.paa";
-tooltip = "UKSFTA Core";
-tooltipOwned = "UKSF Taskforce Alpha";
