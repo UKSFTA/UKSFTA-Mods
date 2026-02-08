@@ -14,4 +14,7 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=2128773802 # Camouflage |
 https://steamcommunity.com/sharedfiles/filedetails/?id=3604061980 # AI | RHS AFRF Armor Nerf
 https://steamcommunity.com/sharedfiles/filedetails/?id=2281685552 # Boat Mod | Forward Scan Sonar For Ships
 
-@ignore 450814997 583496184
+[ignore]
+https://steamcommunity.com/sharedfiles/filedetails/?id=450814997 # Base | CBA_3
+https://steamcommunity.com/sharedfiles/filedetails/?id=463939057 # Overhaul | ACE
+https://steamcommunity.com/sharedfiles/filedetails/?id=843425103 # Characters | RHS AFRF Armor Nerf
