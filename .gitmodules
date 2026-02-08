@@ -2,3 +2,6 @@
 	path = addons/scripts
 	url = git@github.com:UKSFTA/UKSFTA-Scripts.git
 	branch = submodule
+[submodule ".uksf_tools"]
+	path = .uksf_tools
+	url = git@github.com:UKSFTA/UKSFTA-Tools.git
