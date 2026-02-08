@@ -1,11 +1,11 @@
-﻿action = "https://uksfta.github.io/";
+name = "UKSF Taskforce Alpha - Core Modpack";
+action = "https://uksfta.github.io/";
 actionName = "Website";
 author = "UKSF Taskforce Alpha Team";
 logo = "z\uksfta\addons\main\data\icon_128_ca.paa";
 logoOver = "z\uksfta\addons\main\data\icon_128_highlight_ca.paa";
 logoSmall = "z\uksfta\addons\main\data\icon_64_ca.paa";
-name = "UKSF Taskforce Alpha Mods";
-overview = "UKSF Taskforce Alpha";
+overview = "UKSF Taskforce Alpha - Core Modpack. Essential functional modifications and gameplay improvements.";
 picture = "z\uksfta\addons\main\data\title_co.paa";
-tooltip = "UKSFTA";
+tooltip = "UKSFTA Core";
 tooltipOwned = "UKSF Taskforce Alpha";
