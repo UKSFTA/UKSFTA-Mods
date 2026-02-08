@@ -1,43 +1,11 @@
 [default]
 workshop = [
-    "450814997", # CBA_A3
-]
-
-[spe]
-extends = "default"
-dlc = [
-    "Spearhead 1944"
-]
-
-[vn]
-extends = "default"
-dlc = [
-    "S.O.G. Prairie Fire",
-]
-
-[ws]
-extends = "default"
-dlc = [
-    "Western Sahara",
-]
-
-[rf]
-extends = "default"
-dlc = [
-    "Reaction Forces"
-]
-
-[gm]
-extends = "default"
-dlc = [
-    "Global Mobilization - Cold War Germany"
-]
-
-[rhs]
-extends = "default"
-workshop = [
-    "843425103", # RHS AFRF Workshop ID
-    "843577117", # RHS USAF Workshop ID
-    "843593391", # RHS GREF Workshop ID
-    "843632231", # RHS SAF  Workshop ID
+    "1736188034",
+    "2128773802",
+    "2281685552",
+    "3596653038",
+    "3604061980",
+    "3613999293",
+    "3623437185",
+    "887302721",
 ]

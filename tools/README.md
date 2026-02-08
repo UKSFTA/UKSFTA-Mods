@@ -1,1 +1,1 @@
-/ext/Development/UKSFTA-Mods/.uksf_tools/tools/README.md
+../.uksf_tools/tools/README.md

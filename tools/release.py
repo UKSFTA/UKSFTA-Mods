@@ -1,1 +1,1 @@
-/ext/Development/UKSFTA-Mods/.uksf_tools/tools/release.py
+../.uksf_tools/tools/release.py

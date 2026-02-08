@@ -28,7 +28,7 @@ enabled = true
 options.check_orphan_code = true
 
 [sqf.unused]
-#enabled = true #many false positives without DEBUG_MODE_FULL
+enabled = false
 options.check_params = false
 
 [sqf.shadowed]
@@ -36,3 +36,9 @@ enabled = false
 
 [sqf.not_private]
 enabled = true
+
+# If true, the following folders are ignored by all lints
+# Example: ["my_addon/functions", "my_other_addon/config.cpp"]
+ignored = [
+    "addons/scripts*.sqf",
+]

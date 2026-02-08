@@ -1,1 +1,1 @@
-/ext/Development/UKSFTA-Mods/.uksf_tools/tools/stringtable_validator.py
+../.uksf_tools/tools/stringtable_validator.py
