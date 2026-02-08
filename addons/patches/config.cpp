@@ -1,5 +1,5 @@
 class CfgPatches {
-    class UKSFTA_Insignia {
+    class Insignia {
         units[] = {};
         weapons[] = {};
         requiredAddons[] = {};

@@ -12,3 +12,7 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=3604061980 # AI | RHS AFR
 https://steamcommunity.com/sharedfiles/filedetails/?id=2281685552 # Boat Mod | Forward Scan Sonar For Ships
 
 
+[ignore]
+https://steamcommunity.com/sharedfiles/filedetails/?id=450814997 # Core | CBA_A3
+https://steamcommunity.com/sharedfiles/filedetails/?id=463939057 # Overhaul | ace
+https://steamcommunity.com/sharedfiles/filedetails/?id=843425103 # Characters | RHSAFRF

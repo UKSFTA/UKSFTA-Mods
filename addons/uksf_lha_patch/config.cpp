@@ -1,6 +1,6 @@
 class CfgPatches
 {
-	class UKSFTA_LHA_Patch
+	class LHA_Patch
 	{
 		name = "[UKSF] LHA";
         requiredAddons[] = {"Peral_LHA"};
