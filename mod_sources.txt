@@ -1,0 +1,17 @@
+# Paste Steam Workshop URLs or IDs below.
+# Format: URL/ID # Tag (Optional)
+# Example: 450814997 # Weekend Ops, Core
+#
+# To ignore specific dependencies (e.g. CBA/ACE):
+# @ignore 450814997 583496184
+
+https://steamcommunity.com/sharedfiles/filedetails/?id=887302721 # Boat Mod | Paddle Mod
+https://steamcommunity.com/sharedfiles/filedetails/?id=3613999293 # CTR | Dynamic Incognito System
+https://steamcommunity.com/sharedfiles/filedetails/?id=1736188034 # Laws Of War | Guilt & Remembrance
+https://steamcommunity.com/sharedfiles/filedetails/?id=3623437185 # AI | AI Paths
+https://steamcommunity.com/sharedfiles/filedetails/?id=3596653038 # Boat Mod | LHA
+https://steamcommunity.com/sharedfiles/filedetails/?id=2128773802 # Camouflage | RE: Camosys
+https://steamcommunity.com/sharedfiles/filedetails/?id=3604061980 # AI | RHS AFRF Armor Nerf
+https://steamcommunity.com/sharedfiles/filedetails/?id=2281685552 # Boat Mod | Forward Scan Sonar For Ships
+
+@ignore 450814997 583496184
