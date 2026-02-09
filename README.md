@@ -1,16 +1,25 @@
-# UKSF Taskforce Alpha - Mod Collection
+# UKSFTA Mods
 
-Core functional modifications and gameplay improvements for UKSFTA.
+**Core gameplay modifications and asset collection for UKSF Taskforce Alpha.**
 
-## 🛠 Development Workflow
+This repository serves as the central hub for our unit's custom internal modifications, including uniform patches, flags, and essential QoL adjustments.
 
-This project uses the centralized **UKSFTA-Tools** for all automation.
+## 🛠 Features
 
-- **Manage Dependencies**: Edit `mod_sources.txt` and run `python3 tools/manage_mods.py`.
-- **Create Release**: Run `python3 tools/release.py` to build with HEMTT and deploy to Workshop/GitHub.
+- **Standardized VFS**: Unified loading under the `z\uksfta` namespace.
+- **Optimized Assets**: Binarized textures and models for high-performance simulation.
+- **Unit Identity**: Comprehensive collection of Taskforce Alpha flags and insignia.
 
-## 📦 Requirements
+## 📋 Requirements
 
-- [HEMTT](https://github.com/vurtual/hemtt)
-- SteamCMD (for Workshop syncing)
-- GPG (for commit and release signing)
+- **CBA_A3**: Community Base Addons.
+- **ACE3**: Advanced Combat Environment.
+
+## 🔧 Technical Logic
+
+- **VFS Prefix**: `z\uksfta\core`
+- **Build System**: Automated via [**UKSFTA-Tools**](https://github.com/UKSFTA/UKSFTA-Tools).
+
+## ⚖ License
+
+This project is licensed under the **Arma Public License - Share Alike (APL-SA)**. See the `LICENSE` file for full details.
