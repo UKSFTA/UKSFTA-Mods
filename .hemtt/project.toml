@@ -1,11 +1,11 @@
 name = "UKSF Task Force Alpha - Mods"
 author = "UKSF Taskforce Alpha Team"
-prefix = "UKSFTA-Mods"
+prefix = "uksfta"
 mainprefix = "z"
 
 
 [version]
-path = "addons/main/script_version.hpp"
+path = "addons/core/script_version.hpp"
 
 [files]
 include = [
