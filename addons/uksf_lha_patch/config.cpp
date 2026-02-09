@@ -11,7 +11,6 @@ class CfgPatches
 };
 class CfgVehicles
 {
-	class StaticShip;
 	class Peral_LHA;
 	class UKSF_LHA: Peral_LHA
 	{
