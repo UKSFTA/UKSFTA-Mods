@@ -5,7 +5,7 @@ mainprefix = "z"
 
 
 [version]
-path = "addons/core/script_version.hpp"
+path = "addons/main/script_version.hpp"
 
 [files]
 include = [
