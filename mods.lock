@@ -1,0 +1,91 @@
+{
+  "mods": {
+    "887302721": {
+      "files": [
+        "addons/A3_Paddle_Mod.pbo"
+      ],
+      "name": "Boat Mod | Paddle Mod",
+      "dependencies": [],
+      "updated": "1540647705"
+    },
+    "3613999293": {
+      "files": [
+        "addons/DIS.pbo"
+      ],
+      "name": "CTR | Dynamic Incognito System",
+      "dependencies": [
+        {
+          "id": "450814997",
+          "name": "CBA_A3"
+        }
+      ],
+      "updated": "1770716658"
+    },
+    "1736188034": {
+      "files": [
+        "addons/GR.pbo"
+      ],
+      "name": "Laws Of War | Guilt & Remembrance",
+      "dependencies": [
+        {
+          "id": "450814997",
+          "name": "CBA_A3"
+        },
+        {
+          "id": "463939057",
+          "name": "ace"
+        }
+      ],
+      "updated": "1693710356"
+    },
+    "3623437185": {
+      "files": [
+        "addons/Pathing.pbo"
+      ],
+      "name": "AI | AI Paths",
+      "dependencies": [],
+      "updated": "1770340048"
+    },
+    "3596653038": {
+      "files": [
+        "addons/Peral_LHA.pbo"
+      ],
+      "name": "Boat Mod | LHA",
+      "dependencies": [],
+      "updated": "1770481994"
+    },
+    "2128773802": {
+      "files": [
+        "addons/real_camosystem.pbo"
+      ],
+      "name": "Camouflage | RE: Camosys",
+      "dependencies": [],
+      "updated": "1600257726"
+    },
+    "3604061980": {
+      "files": [
+        "addons/fnr_rfnerf.pbo"
+      ],
+      "name": "AI | RHS AFRF Armor Nerf",
+      "dependencies": [
+        {
+          "id": "843425103",
+          "name": "RHSAFRF"
+        },
+        {
+          "id": "450814997",
+          "name": "CBA_A3"
+        }
+      ],
+      "updated": "1769807327"
+    },
+    "2281685552": {
+      "files": [
+        "addons/ship_sonar.pbo"
+      ],
+      "name": "Boat Mod | Forward Scan Sonar For Ships",
+      "dependencies": [],
+      "updated": "1750961487"
+    }
+  }
+}
