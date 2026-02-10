@@ -11,7 +11,6 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=2128773802 # Camouflage |
 https://steamcommunity.com/sharedfiles/filedetails/?id=3604061980 # AI | RHS AFRF Armor Nerf
 https://steamcommunity.com/sharedfiles/filedetails/?id=2281685552 # Boat Mod | Forward Scan Sonar For Ships
 
-
 [ignore]
 # List mods to exclude from download/sync below
 https://steamcommunity.com/sharedfiles/filedetails/?id=450814997 # Core | CBA_A3
