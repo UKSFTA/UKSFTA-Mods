@@ -43,7 +43,7 @@ class CfgVehicles {
         hiddenSelectionsTextures[] = {"Peral_LHA\data\clear_empty_ca.paa","Peral_LHA\data\clear_empty_ca.paa","Peral_LHA\data\clear_empty_ca.paa","\A3\Data_F\Flags\flag_uk_co.paa","Peral_LHA\data\clear_empty_ca.paa"};
     };
 
-    // --- UKSF Toyota Technicals (Triple Durability / Realistic Vulnerability) ---
+    // --- UKSF Toyota Technicals ---
     class Arlit_TOYOTA_LC_HZJ79;
     class UKSF_Toyota_HZJ79: Arlit_TOYOTA_LC_HZJ79 {
         displayName = "[UKSF] Toyota J79";
@@ -54,12 +54,15 @@ class CfgVehicles {
         editorCategory = "UKSFTA_Editor_Cat";
         editorSubcategory = "UKSFTA_SubCat_Vehicles";
         
-        armor = 360;          // Tripled health pool
-        armorStructural = 4;  // Improved resistance to "one-shots"
+        // REINFORCED LOGIC:
+        // High armorStructural means it takes more hits to die.
+        // Moderate armor/minimalHit means bullets always cause some damage.
+        armor = 200;           // Doubled base health
+        armorStructural = 10;  // Tripled (Original is ~2). This is the "Triple Durability"
         
         class HitPoints {
-            // Glass: Very fragile (Threshold: 0.36 damage)
-            class HitGlass1 { armor = 0.5; minimalHit = 0.001; passThrough = 0; };
+            // Glass: Fragile (Always breaks)
+            class HitGlass1 { armor = 0.1; minimalHit = 0.001; passThrough = 0; };
             class HitGlass2: HitGlass1 {};
             class HitGlass3: HitGlass1 {};
             class HitGlass4: HitGlass1 {};
@@ -68,10 +71,11 @@ class CfgVehicles {
             class HitGlass7: HitGlass1 {};
             class HitGlass8: HitGlass1 {};
 
-            // Components: Vulnerable to 5.56 (Threshold: 3.6 damage)
-            class HitBody { armor = 2; minimalHit = 0.01; passThrough = 0.1; };
-            class HitEngine { armor = 2; minimalHit = 0.01; passThrough = 0.1; }; 
-            class HitFuel { armor = 2; minimalHit = 0.01; passThrough = 0.1; };
+            // Components: Vulnerable but tough (Threshold: 1.0 damage)
+            // Even an ACE 5.56mm round at 800m will still cause damage.
+            class HitBody { armor = 2; minimalHit = 0.005; passThrough = 0.1; };
+            class HitEngine { armor = 2; minimalHit = 0.005; passThrough = 0.1; }; 
+            class HitFuel { armor = 2; minimalHit = 0.005; passThrough = 0.1; };
         };
     };
 
@@ -79,7 +83,7 @@ class CfgVehicles {
     class UKSF_Toyota_HZJ79_M240: UKSF_Toyota_HZJ79 { displayName = "[UKSF] Toyota J79 (M240)"; };
     class UKSF_Toyota_HZJ79_M2: UKSF_Toyota_HZJ79 { displayName = "[UKSF] Toyota J79 (M2)"; };
 
-    // --- UKSF Land Cruiser (Armoured SUV Logic) ---
+    // --- UKSF Land Cruiser (Armoured SUV) ---
     class arlit_200_VX_16;
     class UKSF_LC200_VX_16: arlit_200_VX_16 {
         displayName = "[UKSF] Land Cruiser VX '16";
@@ -90,11 +94,11 @@ class CfgVehicles {
         editorCategory = "UKSFTA_Editor_Cat";
         editorSubcategory = "UKSFTA_SubCat_Vehicles";
         
-        armor = 550; 
-        armorStructural = 6;
+        armor = 450; 
+        armorStructural = 15; // Extremely tanky health pool
         
         class HitPoints {
-            // SUV Glass (Threshold: 5.5 damage - 5.56 will crack it)
+            // SUV Glass (Threshold: 4.5 damage - 5.56 cracks it easily)
             class HitGlass1 { armor = 1.0; minimalHit = 0.01; passThrough = 0; };
             class HitGlass2: HitGlass1 {};
             class HitGlass3: HitGlass1 {};
@@ -102,7 +106,7 @@ class CfgVehicles {
             class HitGlass5: HitGlass1 {};
             class HitGlass6: HitGlass1 {};
 
-            // SUV Engine (Threshold: 5.5 damage - 5.56 will damage it slowly)
+            // SUV Components (Threshold: 4.5 damage - 5.56 damages it slowly)
             class HitBody { armor = 4; minimalHit = 0.01; passThrough = 0.1; };
             class HitEngine { armor = 4; minimalHit = 0.01; passThrough = 0.05; }; 
             class HitFuel { armor = 4; minimalHit = 0.01; passThrough = 0.05; };
