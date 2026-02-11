@@ -5,7 +5,7 @@
 class CfgPatches {
     class UKSFTA_Mods_Compat {
         name = "UKSF Taskforce Alpha Mods - Compatibility & Fixes";
-        units[] = {"Peral_LHA","Arlit_TOYOTA_LC_HZJ79","Arlit_TOYOTA_LC_HZJ79_Logi","Arlit_TOYOTA_LC_HZJ79_M240","Arlit_TOYOTA_LC_HZJ79_M2","arlit_200_VX_16"}; // Hook will sync these
+        units[] = {"UKSF_LHA","UKSFTA_TOYOTA_HZJ79_Tough","UKSFTA_TOYOTA_HZJ79_Logi_Tough","UKSFTA_TOYOTA_HZJ79_M240_Tough","UKSFTA_TOYOTA_HZJ79_M2_Tough","UKSFTA_LC200_VX_16_Tough"}; // Hook will sync these
         weapons[] = {};
         requiredVersion = 1.62;
         requiredAddons[] = {
@@ -31,11 +31,15 @@ class CfgVehicles {
     class Car_F;
     class StaticShip;
 
-    // --- UKSF LHA (Direct Overwrite of Peral_LHA) ---
-    class Peral_LHA: StaticShip {
+    // --- UKSF LHA (Unique Variant) ---
+    class Peral_LHA;
+    class UKSF_LHA: Peral_LHA {
         scope = 2; 
         scopeCurator = 2;
-        displayName = "UKSF LHA"; 
+        side = 1;
+        faction = "BLU_F";
+        editorSubcategory = "EdSubcat_Boats";
+        displayName = "[UKSF] LHA"; 
         editorPreview = "\A3\EditorPreviews_F\Data\CfgVehicles\Default\default_editorPreview.paa";
         Aircraft[] = {"fza_ah64d_b2e","TF373_RAF_HC5","vtx_MH60M","UK3CB_BAF_Wildcat_AH1_TRN_8A_Tropical"};
         Amphibious[] = { "", "", "" };
@@ -44,66 +48,88 @@ class CfgVehicles {
         hiddenSelectionsTextures[] = {"Peral_LHA\data\clear_empty_ca.paa","Peral_LHA\data\clear_empty_ca.paa","Peral_LHA\data\clear_empty_ca.paa","\A3\Data_F\Flags\flag_uk_co.paa","Peral_LHA\data\clear_empty_ca.paa"};
     };
 
-    // --- Toyota Technicals Global Armor Base ---
-    class Arlit_TOYOTA_BASE: Car_F {
-        armor = 300;
-        armorStructural = 8;
-        class HitPoints;
-    };
-
-    // --- UKSF Toyota Overwrites ---
-    class Arlit_TOYOTA_LC_HZJ79: Arlit_TOYOTA_BASE {
+    // --- UKSF Toyota Variants ---
+    class Arlit_TOYOTA_LC_HZJ79;
+    class UKSFTA_TOYOTA_HZJ79_Tough: Arlit_TOYOTA_LC_HZJ79 {
         displayName = "[UKSF] Toyota J79";
         scope = 2;
         scopeCurator = 2;
-        class HitPoints: HitPoints {
+        side = 1;
+        faction = "BLU_F";
+        editorSubcategory = "EdSubcat_Cars";
+        armor = 300;
+        armorStructural = 8;
+        class HitPoints {
+            class HitBody { armor = 30; minimalHit = 0.1; passThrough = 0.1; };
             class HitEngine { armor = 40; minimalHit = 0.3; passThrough = 0.05; };
             class HitFuel { armor = 40; minimalHit = 0.3; passThrough = 0.05; };
         };
     };
 
-    class Arlit_TOYOTA_LC_HZJ79_Logi: Arlit_TOYOTA_BASE {
+    class Arlit_TOYOTA_LC_HZJ79_Logi;
+    class UKSFTA_TOYOTA_HZJ79_Logi_Tough: Arlit_TOYOTA_LC_HZJ79_Logi {
         displayName = "[UKSF] Toyota J79 (Logistics)";
         scope = 2;
         scopeCurator = 2;
-        class HitPoints: HitPoints {
+        side = 1;
+        faction = "BLU_F";
+        editorSubcategory = "EdSubcat_Cars";
+        armor = 300;
+        armorStructural = 8;
+        class HitPoints {
+            class HitBody { armor = 30; minimalHit = 0.1; passThrough = 0.1; };
             class HitEngine { armor = 40; minimalHit = 0.3; passThrough = 0.05; };
             class HitFuel { armor = 40; minimalHit = 0.3; passThrough = 0.05; };
         };
     };
 
-    class Arlit_TOYOTA_LC_HZJ79_M240: Arlit_TOYOTA_BASE {
+    class Arlit_TOYOTA_LC_HZJ79_M240;
+    class UKSFTA_TOYOTA_HZJ79_M240_Tough: Arlit_TOYOTA_LC_HZJ79_M240 {
         displayName = "[UKSF] Toyota J79 (M240)";
         scope = 2;
         scopeCurator = 2;
-        class HitPoints: HitPoints {
+        side = 1;
+        faction = "BLU_F";
+        editorSubcategory = "EdSubcat_Cars";
+        armor = 300;
+        armorStructural = 8;
+        class HitPoints {
+            class HitBody { armor = 30; minimalHit = 0.1; passThrough = 0.1; };
             class HitEngine { armor = 40; minimalHit = 0.3; passThrough = 0.05; };
             class HitFuel { armor = 40; minimalHit = 0.3; passThrough = 0.05; };
         };
     };
 
-    class Arlit_TOYOTA_LC_HZJ79_M2: Arlit_TOYOTA_BASE {
+    class Arlit_TOYOTA_LC_HZJ79_M2;
+    class UKSFTA_TOYOTA_HZJ79_M2_Tough: Arlit_TOYOTA_LC_HZJ79_M2 {
         displayName = "[UKSF] Toyota J79 (M2)";
         scope = 2;
         scopeCurator = 2;
-        class HitPoints: HitPoints {
+        side = 1;
+        faction = "BLU_F";
+        editorSubcategory = "EdSubcat_Cars";
+        armor = 300;
+        armorStructural = 8;
+        class HitPoints {
+            class HitBody { armor = 30; minimalHit = 0.1; passThrough = 0.1; };
             class HitEngine { armor = 40; minimalHit = 0.3; passThrough = 0.05; };
             class HitFuel { armor = 40; minimalHit = 0.3; passThrough = 0.05; };
         };
     };
 
-    // --- UKSF Land Cruiser Overwrite ---
-    class arlit_200_16_base: Car_F {
-        armor = 550;
-        armorStructural = 10;
-        class HitPoints;
-    };
-
-    class arlit_200_VX_16: arlit_200_16_base {
+    // --- UKSF Land Cruiser Variant ---
+    class arlit_200_VX_16;
+    class UKSFTA_LC200_VX_16_Tough: arlit_200_VX_16 {
         displayName = "[UKSF] Land Cruiser VX '16";
         scope = 2;
         scopeCurator = 2;
-        class HitPoints: HitPoints {
+        side = 1;
+        faction = "BLU_F";
+        editorSubcategory = "EdSubcat_Cars";
+        armor = 550;
+        armorStructural = 10;
+        class HitPoints {
+            class HitBody { armor = 50; minimalHit = 0.2; passThrough = 0.1; };
             class HitEngine { armor = 60; minimalHit = 0.5; passThrough = 0.05; };
             class HitFuel { armor = 60; minimalHit = 0.5; passThrough = 0.05; };
         };
