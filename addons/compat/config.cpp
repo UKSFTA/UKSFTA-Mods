@@ -5,7 +5,13 @@
 class CfgPatches {
     class UKSFTA_Mods_Compat {
         name = "UKSF Taskforce Alpha Mods - Compatibility & Fixes";
-        units[] = {};
+        units[] = {
+            "UKSF_LHA",
+            "UKSFTA_TOYOTA_HZJ79_Tough",
+            "UKSFTA_TOYOTA_HZJ79_M240_Tough",
+            "UKSFTA_TOYOTA_HZJ79_M2_Tough",
+            "UKSFTA_TOYOTA_HZJ79_Logi_Tough"
+        };
         weapons[] = {};
         requiredVersion = 1.62;
         requiredAddons[] = {
