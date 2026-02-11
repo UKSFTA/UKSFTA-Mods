@@ -5,7 +5,14 @@
 class CfgPatches {
     class UKSFTA_Mods_Compat {
         name = "UKSF Taskforce Alpha Mods - Compatibility & Fixes";
-        units[] = {"UKSF_LHA"};
+        units[] = {
+            "UKSF_LHA",
+            "UKSFTA_TOYOTA_HZJ79_Tough",
+            "UKSFTA_TOYOTA_HZJ79_Logi_Tough",
+            "UKSFTA_TOYOTA_HZJ79_M240_Tough",
+            "UKSFTA_TOYOTA_HZJ79_M2_Tough",
+            "UKSFTA_LC200_VX_16_Tough"
+        };
         weapons[] = {};
         requiredVersion = 1.62;
         requiredAddons[] = {
@@ -34,57 +41,87 @@ class CfgVehicles {
         hiddenSelectionsTextures[] = {"Peral_LHA\data\clear_empty_ca.paa","Peral_LHA\data\clear_empty_ca.paa","Peral_LHA\data\clear_empty_ca.paa","\A3\Data_F\Flags\flag_uk_co.paa","Peral_LHA\data\clear_empty_ca.paa"};
     };
 
-    // --- REINFORCED VEHICLE PATCHES (Direct Class Overwrites) ---
-    // Toyota Technicals - Reinforced (Ignores 5.56mm)
-    class Arlit_TOYOTA_BASE: Car_F {
-        armor = 300;
-        armorStructural = 8;
-        class HitPoints;
-    };
+    // --- REINFORCED UKSFTA VARIANTS ---
+    
+    // Parent references
+    class Arlit_TOYOTA_LC_HZJ79;
+    class Arlit_TOYOTA_LC_HZJ79_Logi;
+    class Arlit_TOYOTA_LC_HZJ79_M240;
+    class Arlit_TOYOTA_LC_HZJ79_M2;
+    class arlit_200_VX_16;
 
-    // Unarmed
-    class Arlit_TOYOTA_LC_HZJ79: Arlit_TOYOTA_BASE {
-        class HitPoints: HitPoints {
-            class HitEngine { armor = 40; minimalHit = 0.3; passThrough = 0.05; };
-            class HitFuel { armor = 40; minimalHit = 0.3; passThrough = 0.05; };
-        };
-    };
-
-    // Logi
-    class Arlit_TOYOTA_LC_HZJ79_Logi: Arlit_TOYOTA_BASE {
-        class HitPoints: HitPoints {
-            class HitEngine { armor = 40; minimalHit = 0.3; passThrough = 0.05; };
-            class HitFuel { armor = 40; minimalHit = 0.3; passThrough = 0.05; };
-        };
-    };
-
-    // M240
-    class Arlit_TOYOTA_LC_HZJ79_M240: Arlit_TOYOTA_BASE {
-        class HitPoints: HitPoints {
-            class HitEngine { armor = 40; minimalHit = 0.3; passThrough = 0.05; };
-            class HitFuel { armor = 40; minimalHit = 0.3; passThrough = 0.05; };
-        };
-    };
-
-    // M2
-    class Arlit_TOYOTA_LC_HZJ79_M2: Arlit_TOYOTA_BASE {
-        class HitPoints: HitPoints {
-            class HitEngine { armor = 40; minimalHit = 0.3; passThrough = 0.05; };
-            class HitFuel { armor = 40; minimalHit = 0.3; passThrough = 0.05; };
-        };
-    };
-
-    // Land Cruiser 200 - Armoured Spec (Ignores 5.56mm & 7.62mm)
-    class arlit_200_16_base: Car_F {
-        armor = 550;
+    // Toyota Technical Unarmed (Reinforced)
+    class UKSFTA_TOYOTA_HZJ79_Tough: Arlit_TOYOTA_LC_HZJ79 {
+        displayName = "[UKSF] Toyota HZJ79 (Reinforced)";
+        scope = 2;
+        side = 1; // BLUFOR
+        faction = "BLU_F";
+        armor = 400;
         armorStructural = 10;
-        class HitPoints;
+        class HitPoints {
+            class HitBody { armor = 40; minimalHit = 0.1; passThrough = 0.1; };
+            class HitEngine { armor = 50; minimalHit = 0.4; passThrough = 0.05; }; 
+            class HitFuel { armor = 50; minimalHit = 0.4; passThrough = 0.05; };
+        };
     };
 
-    class arlit_200_VX_16: arlit_200_16_base {
-        class HitPoints: HitPoints {
-            class HitEngine { armor = 60; minimalHit = 0.5; passThrough = 0.05; };
-            class HitFuel { armor = 60; minimalHit = 0.5; passThrough = 0.05; };
+    // Toyota Technical Logi (Reinforced)
+    class UKSFTA_TOYOTA_HZJ79_Logi_Tough: Arlit_TOYOTA_LC_HZJ79_Logi {
+        displayName = "[UKSF] Toyota HZJ79 Logi (Reinforced)";
+        scope = 2;
+        side = 1;
+        faction = "BLU_F";
+        armor = 400;
+        armorStructural = 10;
+        class HitPoints {
+            class HitBody { armor = 40; minimalHit = 0.1; passThrough = 0.1; };
+            class HitEngine { armor = 50; minimalHit = 0.4; passThrough = 0.05; }; 
+            class HitFuel { armor = 50; minimalHit = 0.4; passThrough = 0.05; };
+        };
+    };
+
+    // Toyota Technical M240 (Reinforced)
+    class UKSFTA_TOYOTA_HZJ79_M240_Tough: Arlit_TOYOTA_LC_HZJ79_M240 {
+        displayName = "[UKSF] Toyota HZJ79 M240 (Reinforced)";
+        scope = 2;
+        side = 1;
+        faction = "BLU_F";
+        armor = 400;
+        armorStructural = 10;
+        class HitPoints {
+            class HitBody { armor = 40; minimalHit = 0.1; passThrough = 0.1; };
+            class HitEngine { armor = 50; minimalHit = 0.4; passThrough = 0.05; }; 
+            class HitFuel { armor = 50; minimalHit = 0.4; passThrough = 0.05; };
+        };
+    };
+
+    // Toyota Technical M2 (Reinforced)
+    class UKSFTA_TOYOTA_HZJ79_M2_Tough: Arlit_TOYOTA_LC_HZJ79_M2 {
+        displayName = "[UKSF] Toyota HZJ79 M2 (Reinforced)";
+        scope = 2;
+        side = 1;
+        faction = "BLU_F";
+        armor = 400;
+        armorStructural = 10;
+        class HitPoints {
+            class HitBody { armor = 40; minimalHit = 0.1; passThrough = 0.1; };
+            class HitEngine { armor = 50; minimalHit = 0.4; passThrough = 0.05; }; 
+            class HitFuel { armor = 50; minimalHit = 0.4; passThrough = 0.05; };
+        };
+    };
+
+    // Land Cruiser Armoured (Reinforced)
+    class UKSFTA_LC200_VX_16_Tough: arlit_200_VX_16 {
+        displayName = "[UKSF] Land Cruiser VX '16 (Reinforced)";
+        scope = 2;
+        side = 1;
+        faction = "BLU_F";
+        armor = 650;
+        armorStructural = 12;
+        class HitPoints {
+            class HitBody { armor = 60; minimalHit = 0.2; passThrough = 0.1; };
+            class HitEngine { armor = 70; minimalHit = 0.6; passThrough = 0.05; }; 
+            class HitFuel { armor = 70; minimalHit = 0.6; passThrough = 0.05; };
         };
     };
 };
