@@ -27,7 +27,6 @@ class CfgVehicles {
     class Peral_LHA;
 
     // --- UKSF LHA ---
-    // Moving to 'Static' category to ensure it shows in Objects/Ships
     class UKSF_LHA: Peral_LHA {
         scope = 2; 
         scopeCurator = 2;
@@ -95,7 +94,7 @@ class CfgVehicles {
         armorStructural = 6;
         
         class HitPoints {
-            // SUV Glass: Tougher (Threshold: 5.5 damage - 5.56 will crack it eventually)
+            // SUV Glass (Threshold: 5.5 damage - 5.56 will crack it)
             class HitGlass1 { armor = 1.0; minimalHit = 0.01; passThrough = 0; };
             class HitGlass2: HitGlass1 {};
             class HitGlass3: HitGlass1 {};
@@ -103,10 +102,10 @@ class CfgVehicles {
             class HitGlass5: HitGlass1 {};
             class HitGlass6: HitGlass1 {};
 
-            // SUV Engine: Ignores 5.56 (hit 8), but 7.62 (hit 12) damages it (Threshold: 11 damage)
-            class HitBody { armor = 4; minimalHit = 0.02; passThrough = 0.1; };
-            class HitEngine { armor = 4; minimalHit = 0.02; passThrough = 0.05; }; 
-            class HitFuel { armor = 4; minimalHit = 0.02; passThrough = 0.05; };
+            // SUV Engine (Threshold: 5.5 damage - 5.56 will damage it slowly)
+            class HitBody { armor = 4; minimalHit = 0.01; passThrough = 0.1; };
+            class HitEngine { armor = 4; minimalHit = 0.01; passThrough = 0.05; }; 
+            class HitFuel { armor = 4; minimalHit = 0.01; passThrough = 0.05; };
         };
     };
 };
