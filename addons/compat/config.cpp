@@ -5,7 +5,7 @@
 class CfgPatches {
     class UKSFTA_Mods_Compat {
         name = "UKSF Taskforce Alpha Mods - Compatibility & Fixes";
-        units[] = {"UKSF_LHA","UKSFTA_TOYOTA_HZJ79_Tough","UKSFTA_TOYOTA_HZJ79_Logi_Tough","UKSFTA_TOYOTA_HZJ79_M240_Tough","UKSFTA_TOYOTA_HZJ79_M2_Tough","UKSFTA_LC200_VX_16_Tough"}; // Hook will sync these
+        units[] = {"UKSF_LHA","UKSF_Toyota_HZJ79","UKSF_Toyota_HZJ79_Logi","UKSF_Toyota_HZJ79_M240","UKSF_Toyota_HZJ79_M2","UKSF_LC200_VX_16"}; // Hook will sync these
         weapons[] = {};
         requiredVersion = 1.62;
         requiredAddons[] = {
@@ -47,7 +47,7 @@ class CfgVehicles {
     class Arlit_TOYOTA_LC_HZJ79_M2;
     class arlit_200_VX_16;
 
-    // --- UKSF LHA ---
+    // --- UKSF LHA (Reinforced Variant) ---
     class UKSF_LHA: Peral_LHA {
         scope = 2; 
         scopeCurator = 2;
@@ -56,6 +56,7 @@ class CfgVehicles {
         editorCategory = "UKSFTA_Campaign";
         editorSubcategory = "UKSFTA_Vehicles";
         displayName = "[UKSF] LHA"; 
+        editorPreview = "\A3\EditorPreviews_F\Data\CfgVehicles\Default\default_editorPreview.paa";
         Aircraft[] = {"fza_ah64d_b2e","TF373_RAF_HC5","vtx_MH60M","UK3CB_BAF_Wildcat_AH1_TRN_8A_Tropical"};
         Amphibious[] = { "", "", "" };
         Boats[] = {{"rhsgref_hidf_assault_boat",8,1,0.2},{"UK3CB_BAF_RHIB_HMG_MTP_RM",9,1.2,2},{"UK3CB_BAF_RHIB_GPMG_MTP_RM",9,1.2,2}};
@@ -63,8 +64,8 @@ class CfgVehicles {
         hiddenSelectionsTextures[] = {"Peral_LHA\data\clear_empty_ca.paa","Peral_LHA\data\clear_empty_ca.paa","Peral_LHA\data\clear_empty_ca.paa","\A3\Data_F\Flags\flag_uk_co.paa","Peral_LHA\data\clear_empty_ca.paa"};
     };
 
-    // --- Toyota Technical Unarmed ---
-    class UKSFTA_TOYOTA_HZJ79_Tough: Arlit_TOYOTA_LC_HZJ79 {
+    // --- UKSF Toyota Technicals (Reinforced Variants) ---
+    class UKSF_Toyota_HZJ79: Arlit_TOYOTA_LC_HZJ79 {
         displayName = "[UKSF] Toyota J79";
         scope = 2;
         scopeCurator = 2;
@@ -81,8 +82,7 @@ class CfgVehicles {
         };
     };
 
-    // --- Toyota Technical Logi ---
-    class UKSFTA_TOYOTA_HZJ79_Logi_Tough: Arlit_TOYOTA_LC_HZJ79_Logi {
+    class UKSF_Toyota_HZJ79_Logi: Arlit_TOYOTA_LC_HZJ79_Logi {
         displayName = "[UKSF] Toyota J79 (Logistics)";
         scope = 2;
         scopeCurator = 2;
@@ -99,8 +99,7 @@ class CfgVehicles {
         };
     };
 
-    // --- Toyota Technical M240 ---
-    class UKSFTA_TOYOTA_HZJ79_M240_Tough: Arlit_TOYOTA_LC_HZJ79_M240 {
+    class UKSF_Toyota_HZJ79_M240: Arlit_TOYOTA_LC_HZJ79_M240 {
         displayName = "[UKSF] Toyota J79 (M240)";
         scope = 2;
         scopeCurator = 2;
@@ -117,8 +116,7 @@ class CfgVehicles {
         };
     };
 
-    // --- Toyota Technical M2 ---
-    class UKSFTA_TOYOTA_HZJ79_M2_Tough: Arlit_TOYOTA_LC_HZJ79_M2 {
+    class UKSF_Toyota_HZJ79_M2: Arlit_TOYOTA_LC_HZJ79_M2 {
         displayName = "[UKSF] Toyota J79 (M2)";
         scope = 2;
         scopeCurator = 2;
@@ -135,8 +133,8 @@ class CfgVehicles {
         };
     };
 
-    // --- Land Cruiser Armoured ---
-    class UKSFTA_LC200_VX_16_Tough: arlit_200_VX_16 {
+    // --- UKSF Land Cruiser (Reinforced Variant) ---
+    class UKSF_LC200_VX_16: arlit_200_VX_16 {
         displayName = "[UKSF] Land Cruiser VX '16";
         scope = 2;
         scopeCurator = 2;
