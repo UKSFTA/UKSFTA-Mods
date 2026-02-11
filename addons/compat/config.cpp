@@ -31,10 +31,8 @@ class CfgVehicles {
         hiddenSelectionsTextures[] = {"Peral_LHA\data\clear_empty_ca.paa","Peral_LHA\data\clear_empty_ca.paa","Peral_LHA\data\clear_empty_ca.paa","\A3\Data_F\Flags\flag_uk_co.paa","Peral_LHA\data\clear_empty_ca.paa"};
     };
 
-    // Arlit Toyota Patches (Campaign Buffs)
-    class Arlit_TOYOTA_LC_HZJ79;
-    class UKSFTA_TOYOTA_HZJ79: Arlit_TOYOTA_LC_HZJ79 {
-        displayName = "[UKSF] Toyota HZJ79 (Tough)";
+    // Arlit Toyota Global Patches (Direct Overwrites)
+    class Arlit_TOYOTA_LC_HZJ79 {
         armor = 250; // Increased from 120
         armorStructural = 10; // Increased from 4
         class HitPoints {
@@ -53,9 +51,7 @@ class CfgVehicles {
         };
     };
 
-    class Arlit_TOYOTA_LC_HZJ79_M240;
-    class UKSFTA_TOYOTA_HZJ79_M240: Arlit_TOYOTA_LC_HZJ79_M240 {
-        displayName = "[UKSF] Toyota HZJ79 M240 (Tough)";
+    class Arlit_TOYOTA_LC_HZJ79_M240: Arlit_TOYOTA_LC_HZJ79 {
         armor = 250;
         armorStructural = 10;
         class HitPoints {
@@ -65,9 +61,7 @@ class CfgVehicles {
         };
     };
 
-    class Arlit_TOYOTA_LC_HZJ79_M2;
-    class UKSFTA_TOYOTA_HZJ79_M2: Arlit_TOYOTA_LC_HZJ79_M2 {
-        displayName = "[UKSF] Toyota HZJ79 M2 (Tough)";
+    class Arlit_TOYOTA_LC_HZJ79_M2: Arlit_TOYOTA_LC_HZJ79_M240 {
         armor = 250;
         armorStructural = 10;
         class HitPoints {
@@ -77,9 +71,7 @@ class CfgVehicles {
         };
     };
 
-    class Arlit_TOYOTA_LC_HZJ79_Logi;
-    class UKSFTA_TOYOTA_HZJ79_Logi: Arlit_TOYOTA_LC_HZJ79_Logi {
-        displayName = "[UKSF] Toyota HZJ79 Logi (Tough)";
+    class Arlit_TOYOTA_LC_HZJ79_Logi: Arlit_TOYOTA_LC_HZJ79 {
         armor = 250;
         armorStructural = 10;
         class HitPoints {
