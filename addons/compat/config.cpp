@@ -8,12 +8,32 @@ class CfgPatches {
         units[] = {"UKSF_LHA"};
         weapons[] = {};
         requiredVersion = 1.62;
-        requiredAddons[] = {"UKSFTA_Mods_Main", "Peral_LHA", "Arlit_Toyota"};
+        requiredAddons[] = {
+            "UKSFTA_Mods_Main",
+            "Peral_LHA",
+            "Arlit_Toyota",
+            "rhsusf_c_weapons",
+            "rhsusf_main",
+            "rhsusf_c_identity"
+        };
         author = "UKSF Taskforce Alpha Team";
         authors[] = {"UKSF Taskforce Alpha Team"};
         version = QUOTE(MAJOR.MINOR.PATCHLVL);
         versionStr = QUOTE(MAJOR.MINOR.PATCHLVL);
         versionAr[] = {MAJOR,MINOR,PATCHLVL};
+    };
+};
+
+// Technical Fixes for Malformed Magazines
+class CfgMagazines {
+    class rhs_mag_762x51_M240_200;
+    class arlit_mag_762x51_M240_200: rhs_mag_762x51_M240_200 {
+        scope = 2;
+    };
+
+    class rhs_mag_100rnd_127x99_mag_Tracer_Red;
+    class arlit_mag_100rnd_127x99_mag_Tracer_Red: rhs_mag_100rnd_127x99_mag_Tracer_Red {
+        scope = 2;
     };
 };
 
