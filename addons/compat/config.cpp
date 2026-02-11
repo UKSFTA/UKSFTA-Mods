@@ -24,7 +24,7 @@ class CfgPatches {
 };
 
 class CfgVehicles {
-    // --- TOP-LEVEL FORWARD DECLARATIONS ---
+    // --- Global Forward Declarations ---
     class HitPoints;
     class HitBody;
     class HitEngine;
@@ -62,13 +62,21 @@ class CfgVehicles {
         hiddenSelectionsTextures[] = {"Peral_LHA\data\clear_empty_ca.paa","Peral_LHA\data\clear_empty_ca.paa","Peral_LHA\data\clear_empty_ca.paa","\A3\Data_F\Flags\flag_uk_co.paa","Peral_LHA\data\clear_empty_ca.paa"};
     };
 
-    // --- UKSF Toyota Technicals ---
+    // --- UKSF Toyota Technicals (Balanced Reinforced) ---
     class UKSF_Toyota_HZJ79: Arlit_TOYOTA_LC_HZJ79 {
         displayName = "[UKSF] Toyota J79";
         scope = 2; scopeCurator = 2; side = 1; faction = "UKSFTA_Faction";
         editorCategory = "UKSFTA_Editor_Cat"; editorSubcategory = "UKSFTA_SubCat_Vehicles";
-        armor = 200; armorStructural = 6; damageResistance = 0.004; crewVulnerable = 1;
+        
+        // BALANCED DAMAGE MODEL:
+        // Lower armor (divisor) so rounds penetrate, high structural so it doesn't explode.
+        armor = 150;           // Original is 120. Allows 5.56 to damage components.
+        armorStructural = 12;  // High value: vehicle takes a LOT of hits to explode.
+        damageResistance = 0.004;
+        crewVulnerable = 1;
+
         class HitPoints: HitPoints {
+            // Glass: Fragile
             class HitGlass1: HitGlass1 { armor = 0.1; minimalHit = 0.001; };
             class HitGlass2: HitGlass2 { armor = 0.1; minimalHit = 0.001; };
             class HitGlass3: HitGlass3 { armor = 0.1; minimalHit = 0.001; };
@@ -77,9 +85,11 @@ class CfgVehicles {
             class HitGlass6: HitGlass6 { armor = 0.1; minimalHit = 0.001; };
             class HitGlass7: HitGlass7 { armor = 0.1; minimalHit = 0.001; };
             class HitGlass8: HitGlass8 { armor = 0.1; minimalHit = 0.001; };
-            class HitBody: HitBody { armor = 2; minimalHit = 0.01; };
-            class HitEngine: HitEngine { armor = 2; minimalHit = 0.01; }; 
-            class HitFuel: HitFuel { armor = 2; minimalHit = 0.01; };
+
+            // Body: Consistent wear and tear
+            class HitBody: HitBody { armor = 1.5; minimalHit = 0.01; };
+            class HitEngine: HitEngine { armor = 1.5; minimalHit = 0.01; }; 
+            class HitFuel: HitFuel { armor = 1.5; minimalHit = 0.01; };
         };
     };
 
@@ -87,10 +97,10 @@ class CfgVehicles {
         displayName = "[UKSF] Toyota J79 (Logistics)";
         scope = 2; scopeCurator = 2; side = 1; faction = "UKSFTA_Faction";
         editorCategory = "UKSFTA_Editor_Cat"; editorSubcategory = "UKSFTA_SubCat_Vehicles";
-        armor = 200; armorStructural = 6; damageResistance = 0.004; crewVulnerable = 1;
+        armor = 150; armorStructural = 12; damageResistance = 0.004; crewVulnerable = 1;
         class HitPoints: HitPoints {
-            class HitBody: HitBody { armor = 2; minimalHit = 0.01; };
-            class HitEngine: HitEngine { armor = 2; minimalHit = 0.01; }; 
+            class HitBody: HitBody { armor = 1.5; minimalHit = 0.01; };
+            class HitEngine: HitEngine { armor = 1.5; minimalHit = 0.01; }; 
         };
     };
 
@@ -98,10 +108,10 @@ class CfgVehicles {
         displayName = "[UKSF] Toyota J79 (M240)";
         scope = 2; scopeCurator = 2; side = 1; faction = "UKSFTA_Faction";
         editorCategory = "UKSFTA_Editor_Cat"; editorSubcategory = "UKSFTA_SubCat_Vehicles";
-        armor = 200; armorStructural = 6; damageResistance = 0.004; crewVulnerable = 1;
+        armor = 150; armorStructural = 12; damageResistance = 0.004; crewVulnerable = 1;
         class HitPoints: HitPoints {
-            class HitBody: HitBody { armor = 2; minimalHit = 0.01; };
-            class HitEngine: HitEngine { armor = 2; minimalHit = 0.01; }; 
+            class HitBody: HitBody { armor = 1.5; minimalHit = 0.01; };
+            class HitEngine: HitEngine { armor = 1.5; minimalHit = 0.01; }; 
         };
     };
 
@@ -109,10 +119,10 @@ class CfgVehicles {
         displayName = "[UKSF] Toyota J79 (M2)";
         scope = 2; scopeCurator = 2; side = 1; faction = "UKSFTA_Faction";
         editorCategory = "UKSFTA_Editor_Cat"; editorSubcategory = "UKSFTA_SubCat_Vehicles";
-        armor = 200; armorStructural = 6; damageResistance = 0.004; crewVulnerable = 1;
+        armor = 150; armorStructural = 12; damageResistance = 0.004; crewVulnerable = 1;
         class HitPoints: HitPoints {
-            class HitBody: HitBody { armor = 2; minimalHit = 0.01; };
-            class HitEngine: HitEngine { armor = 2; minimalHit = 0.01; }; 
+            class HitBody: HitBody { armor = 1.5; minimalHit = 0.01; };
+            class HitEngine: HitEngine { armor = 1.5; minimalHit = 0.01; }; 
         };
     };
 
@@ -121,7 +131,12 @@ class CfgVehicles {
         displayName = "[UKSF] Land Cruiser VX '16";
         scope = 2; scopeCurator = 2; side = 1; faction = "UKSFTA_Faction";
         editorCategory = "UKSFTA_Editor_Cat"; editorSubcategory = "UKSFTA_SubCat_Vehicles";
-        armor = 450; armorStructural = 10; damageResistance = 0.004; crewVulnerable = 1;
+        
+        armor = 300; 
+        armorStructural = 15;
+        damageResistance = 0.004;
+        crewVulnerable = 1;
+
         class HitPoints: HitPoints {
             class HitGlass1: HitGlass1 { armor = 1.0; minimalHit = 0.01; };
             class HitGlass2: HitGlass2 { armor = 1.0; minimalHit = 0.01; };
@@ -129,9 +144,10 @@ class CfgVehicles {
             class HitGlass4: HitGlass4 { armor = 1.0; minimalHit = 0.01; };
             class HitGlass5: HitGlass5 { armor = 1.0; minimalHit = 0.01; };
             class HitGlass6: HitGlass6 { armor = 1.0; minimalHit = 0.01; };
-            class HitBody: HitBody { armor = 4; minimalHit = 0.01; };
-            class HitEngine: HitEngine { armor = 4; minimalHit = 0.01; }; 
-            class HitFuel: HitFuel { armor = 4; minimalHit = 0.01; };
+
+            class HitBody: HitBody { armor = 3; minimalHit = 0.01; };
+            class HitEngine: HitEngine { armor = 3; minimalHit = 0.01; }; 
+            class HitFuel: HitFuel { armor = 3; minimalHit = 0.01; };
         };
     };
 };
