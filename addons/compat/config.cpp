@@ -29,7 +29,6 @@ class CfgPatches {
 };
 
 class CfgVehicles {
-    class Car_F;
     class Peral_LHA;
 
     // --- LHA Boat Patch ---
