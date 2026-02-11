@@ -36,7 +36,6 @@ class CfgVehicles {
         faction = "UKSFTA_Faction";
         editorCategory = "UKSFTA_Editor_Cat";
         editorSubcategory = "UKSFTA_SubCat_Vehicles";
-        vehicleClass = "UKSFTA_Vehicles"; // Legacy support
         displayName = "[UKSF] LHA"; 
         Aircraft[] = {"fza_ah64d_b2e","TF373_RAF_HC5","vtx_MH60M","UK3CB_BAF_Wildcat_AH1_TRN_8A_Tropical"};
         Boats[] = {{"rhsgref_hidf_assault_boat",8,1,0.2},{"UK3CB_BAF_RHIB_HMG_MTP_RM",9,1.2,2},{"UK3CB_BAF_RHIB_GPMG_MTP_RM",9,1.2,2}};
@@ -44,7 +43,7 @@ class CfgVehicles {
         hiddenSelectionsTextures[] = {"Peral_LHA\data\clear_empty_ca.paa","Peral_LHA\data\clear_empty_ca.paa","Peral_LHA\data\clear_empty_ca.paa","\A3\Data_F\Flags\flag_uk_co.paa","Peral_LHA\data\clear_empty_ca.paa"};
     };
 
-    // --- UKSF Toyota Variants ---
+    // --- UKSF Toyota Technicals ---
     class Arlit_TOYOTA_LC_HZJ79;
     class UKSF_Toyota_HZJ79: Arlit_TOYOTA_LC_HZJ79 {
         displayName = "[UKSF] Toyota J79";
@@ -54,11 +53,21 @@ class CfgVehicles {
         faction = "UKSFTA_Faction";
         editorCategory = "UKSFTA_Editor_Cat";
         editorSubcategory = "UKSFTA_SubCat_Vehicles";
-        armor = 250;          // Realistic reinforced health
+        armor = 250;
         armorStructural = 6; 
         class HitPoints {
+            // Realistic Glass: can be broken by standard fire
+            class HitGlass1 { armor = 0.5; minimalHit = 0.02; passThrough = 0; };
+            class HitGlass2: HitGlass1 {};
+            class HitGlass3: HitGlass1 {};
+            class HitGlass4: HitGlass1 {};
+            class HitGlass5: HitGlass1 {};
+            class HitGlass6: HitGlass1 {};
+            class HitGlass7: HitGlass1 {};
+            class HitGlass8: HitGlass1 {};
+
             class HitBody { armor = 20; minimalHit = 0.05; passThrough = 0.1; };
-            class HitEngine { armor = 30; minimalHit = 0.1; passThrough = 0.1; }; // 5.56mm will do damage
+            class HitEngine { armor = 30; minimalHit = 0.1; passThrough = 0.1; }; 
             class HitFuel { armor = 30; minimalHit = 0.1; passThrough = 0.1; };
         };
     };
@@ -75,6 +84,15 @@ class CfgVehicles {
         armor = 250;
         armorStructural = 6;
         class HitPoints {
+            class HitGlass1 { armor = 0.5; minimalHit = 0.02; passThrough = 0; };
+            class HitGlass2: HitGlass1 {};
+            class HitGlass3: HitGlass1 {};
+            class HitGlass4: HitGlass1 {};
+            class HitGlass5: HitGlass1 {};
+            class HitGlass6: HitGlass1 {};
+            class HitGlass7: HitGlass1 {};
+            class HitGlass8: HitGlass1 {};
+
             class HitBody { armor = 20; minimalHit = 0.05; passThrough = 0.1; };
             class HitEngine { armor = 30; minimalHit = 0.1; passThrough = 0.1; };
             class HitFuel { armor = 30; minimalHit = 0.1; passThrough = 0.1; };
@@ -93,6 +111,15 @@ class CfgVehicles {
         armor = 250;
         armorStructural = 6;
         class HitPoints {
+            class HitGlass1 { armor = 0.5; minimalHit = 0.02; passThrough = 0; };
+            class HitGlass2: HitGlass1 {};
+            class HitGlass3: HitGlass1 {};
+            class HitGlass4: HitGlass1 {};
+            class HitGlass5: HitGlass1 {};
+            class HitGlass6: HitGlass1 {};
+            class HitGlass7: HitGlass1 {};
+            class HitGlass8: HitGlass1 {};
+
             class HitBody { armor = 20; minimalHit = 0.05; passThrough = 0.1; };
             class HitEngine { armor = 30; minimalHit = 0.1; passThrough = 0.1; };
             class HitFuel { armor = 30; minimalHit = 0.1; passThrough = 0.1; };
@@ -111,6 +138,15 @@ class CfgVehicles {
         armor = 250;
         armorStructural = 6;
         class HitPoints {
+            class HitGlass1 { armor = 0.5; minimalHit = 0.02; passThrough = 0; };
+            class HitGlass2: HitGlass1 {};
+            class HitGlass3: HitGlass1 {};
+            class HitGlass4: HitGlass1 {};
+            class HitGlass5: HitGlass1 {};
+            class HitGlass6: HitGlass1 {};
+            class HitGlass7: HitGlass1 {};
+            class HitGlass8: HitGlass1 {};
+
             class HitBody { armor = 20; minimalHit = 0.05; passThrough = 0.1; };
             class HitEngine { armor = 30; minimalHit = 0.1; passThrough = 0.1; };
             class HitFuel { armor = 30; minimalHit = 0.1; passThrough = 0.1; };
@@ -127,11 +163,19 @@ class CfgVehicles {
         faction = "UKSFTA_Faction";
         editorCategory = "UKSFTA_Editor_Cat";
         editorSubcategory = "UKSFTA_SubCat_Vehicles";
-        armor = 400; // Stronger, but vulnerable to heavy fire
+        armor = 400;
         armorStructural = 8;
         class HitPoints {
+            // Harder glass for armored SUV
+            class HitGlass1 { armor = 1.5; minimalHit = 0.1; passThrough = 0; };
+            class HitGlass2: HitGlass1 {};
+            class HitGlass3: HitGlass1 {};
+            class HitGlass4: HitGlass1 {};
+            class HitGlass5: HitGlass1 {};
+            class HitGlass6: HitGlass1 {};
+
             class HitBody { armor = 40; minimalHit = 0.1; passThrough = 0.1; };
-            class HitEngine { armor = 50; minimalHit = 0.2; passThrough = 0.05; }; // Ignores 5.56, but not 7.62
+            class HitEngine { armor = 50; minimalHit = 0.2; passThrough = 0.05; };
             class HitFuel { armor = 50; minimalHit = 0.2; passThrough = 0.05; };
         };
     };
