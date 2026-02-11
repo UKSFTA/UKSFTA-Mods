@@ -9,7 +9,7 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = 1.62;
         requiredAddons[] = {
-            "UKSFTA_Mods_Main",
+            "UKSFTA_Mods_Main", // Load main first to establish categories
             "Arlit_Toyota",
             "Peral_LHA",
             "rhsusf_c_weapons",
@@ -27,18 +27,6 @@ class CfgPatches {
     };
 };
 
-class CfgEditorCategories {
-    class UKSFTA_Campaign {
-        displayName = "UKSF - Campaign";
-    };
-};
-
-class CfgEditorSubcategories {
-    class UKSFTA_Vehicles {
-        displayName = "Reinforced Vehicles";
-    };
-};
-
 class CfgVehicles {
     class Peral_LHA;
     class Arlit_TOYOTA_LC_HZJ79;
@@ -52,9 +40,9 @@ class CfgVehicles {
         scope = 2; 
         scopeCurator = 2;
         side = 1;
-        faction = "BLU_F";
-        editorCategory = "UKSFTA_Campaign";
-        editorSubcategory = "UKSFTA_Vehicles";
+        faction = "UKSFTA_Faction";
+        editorCategory = "UKSFTA_Editor_Cat";
+        editorSubcategory = "UKSFTA_SubCat_Vehicles";
         displayName = "[UKSF] LHA"; 
         editorPreview = "\A3\EditorPreviews_F\Data\CfgVehicles\Default\default_editorPreview.paa";
         Aircraft[] = {"fza_ah64d_b2e","TF373_RAF_HC5","vtx_MH60M","UK3CB_BAF_Wildcat_AH1_TRN_8A_Tropical"};
@@ -70,9 +58,9 @@ class CfgVehicles {
         scope = 2;
         scopeCurator = 2;
         side = 1;
-        faction = "BLU_F";
-        editorCategory = "UKSFTA_Campaign";
-        editorSubcategory = "UKSFTA_Vehicles";
+        faction = "UKSFTA_Faction";
+        editorCategory = "UKSFTA_Editor_Cat";
+        editorSubcategory = "UKSFTA_SubCat_Vehicles";
         armor = 400;
         armorStructural = 10;
         class HitPoints {
@@ -87,9 +75,9 @@ class CfgVehicles {
         scope = 2;
         scopeCurator = 2;
         side = 1;
-        faction = "BLU_F";
-        editorCategory = "UKSFTA_Campaign";
-        editorSubcategory = "UKSFTA_Vehicles";
+        faction = "UKSFTA_Faction";
+        editorCategory = "UKSFTA_Editor_Cat";
+        editorSubcategory = "UKSFTA_SubCat_Vehicles";
         armor = 400;
         armorStructural = 10;
         class HitPoints {
@@ -104,9 +92,9 @@ class CfgVehicles {
         scope = 2;
         scopeCurator = 2;
         side = 1;
-        faction = "BLU_F";
-        editorCategory = "UKSFTA_Campaign";
-        editorSubcategory = "UKSFTA_Vehicles";
+        faction = "UKSFTA_Faction";
+        editorCategory = "UKSFTA_Editor_Cat";
+        editorSubcategory = "UKSFTA_SubCat_Vehicles";
         armor = 400;
         armorStructural = 10;
         class HitPoints {
@@ -121,9 +109,9 @@ class CfgVehicles {
         scope = 2;
         scopeCurator = 2;
         side = 1;
-        faction = "BLU_F";
-        editorCategory = "UKSFTA_Campaign";
-        editorSubcategory = "UKSFTA_Vehicles";
+        faction = "UKSFTA_Faction";
+        editorCategory = "UKSFTA_Editor_Cat";
+        editorSubcategory = "UKSFTA_SubCat_Vehicles";
         armor = 400;
         armorStructural = 10;
         class HitPoints {
@@ -139,9 +127,9 @@ class CfgVehicles {
         scope = 2;
         scopeCurator = 2;
         side = 1;
-        faction = "BLU_F";
-        editorCategory = "UKSFTA_Campaign";
-        editorSubcategory = "UKSFTA_Vehicles";
+        faction = "UKSFTA_Faction";
+        editorCategory = "UKSFTA_Editor_Cat";
+        editorSubcategory = "UKSFTA_SubCat_Vehicles";
         armor = 650;
         armorStructural = 12;
         class HitPoints {

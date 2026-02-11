@@ -8,12 +8,35 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = 1.62;
-        requiredAddons[] = {};
+        requiredAddons[] = {"A3_Data_F"};
         author = "UKSF Taskforce Alpha Team";
         authors[] = {"UKSF Taskforce Alpha Team"};
         version = QUOTE(MAJOR.MINOR.PATCHLVL);
         versionStr = QUOTE(MAJOR.MINOR.PATCHLVL);
         versionAr[] = {MAJOR,MINOR,PATCHLVL};
+    };
+};
+
+// Global Editor Category (The "NATO/CSAT" level tab)
+class CfgEditorCategories {
+    class UKSFTA_Editor_Cat {
+        displayName = "UKSF Taskforce Alpha"; 
+    };
+};
+
+// Global Subcategory (The "Infantry/Cars" folder inside the tab)
+class CfgEditorSubcategories {
+    class UKSFTA_SubCat_Vehicles {
+        displayName = "Vehicles (Reinforced)";
+    };
+};
+
+// Global Faction (Links to Side and Category)
+class CfgFactionClasses {
+    class UKSFTA_Faction {
+        displayName = "UKSF Taskforce Alpha";
+        side = 1; // BLUFOR
+        priority = 1;
     };
 };
 
