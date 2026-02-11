@@ -21,51 +21,27 @@ class CfgPatches {
 };
 
 class CfgVehicles {
-    // 1. Clean Global Patch for Toyota Pickups
+    // Toyota Pickups Global Patch
     class Arlit_TOYOTA_BASE {
         armor = 800;
         armorStructural = 15;
 
         class HitPoints {
-            class HitBody {
-                armor = 50;
-                minimalHit = 0.1;
-                passThrough = 0.1;
-            };
-            class HitEngine {
-                armor = 60;
-                minimalHit = 0.8;
-                passThrough = 0.05;
-            };
-            class HitFuel {
-                armor = 60;
-                minimalHit = 0.8;
-                passThrough = 0.05;
-            };
+            class HitBody { armor = 50; minimalHit = 0.1; passThrough = 0.1; };
+            class HitEngine { armor = 60; minimalHit = 0.8; passThrough = 0.05; }; 
+            class HitFuel { armor = 60; minimalHit = 0.8; passThrough = 0.05; };
         };
     };
 
-    // 2. Clean Global Patch for Land Cruiser 200s
+    // Land Cruiser 200 Global Patch
     class arlit_200_16_base {
         armor = 800;
         armorStructural = 15;
 
         class HitPoints {
-            class HitBody {
-                armor = 50;
-                minimalHit = 0.1;
-                passThrough = 0.1;
-            };
-            class HitEngine {
-                armor = 60;
-                minimalHit = 0.8;
-                passThrough = 0.05;
-            };
-            class HitFuel {
-                armor = 60;
-                minimalHit = 0.8;
-                passThrough = 0.05;
-            };
+            class HitBody { armor = 50; minimalHit = 0.1; passThrough = 0.1; };
+            class HitEngine { armor = 60; minimalHit = 0.8; passThrough = 0.05; };
+            class HitFuel { armor = 60; minimalHit = 0.8; passThrough = 0.05; };
         };
     };
 };
