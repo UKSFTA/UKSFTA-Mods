@@ -24,7 +24,26 @@ class CfgPatches {
 };
 
 class CfgVehicles {
+    // --- TOP-LEVEL FORWARD DECLARATIONS ---
+    class HitPoints;
+    class HitBody;
+    class HitEngine;
+    class HitFuel;
+    class HitGlass1;
+    class HitGlass2;
+    class HitGlass3;
+    class HitGlass4;
+    class HitGlass5;
+    class HitGlass6;
+    class HitGlass7;
+    class HitGlass8;
+
     class Peral_LHA;
+    class Arlit_TOYOTA_LC_HZJ79;
+    class Arlit_TOYOTA_LC_HZJ79_Logi;
+    class Arlit_TOYOTA_LC_HZJ79_M240;
+    class Arlit_TOYOTA_LC_HZJ79_M2;
+    class arlit_200_VX_16;
 
     // --- UKSF LHA ---
     class UKSF_LHA: Peral_LHA {
@@ -44,72 +63,75 @@ class CfgVehicles {
     };
 
     // --- UKSF Toyota Technicals ---
-    class Arlit_TOYOTA_LC_HZJ79;
     class UKSF_Toyota_HZJ79: Arlit_TOYOTA_LC_HZJ79 {
         displayName = "[UKSF] Toyota J79";
-        scope = 2;
-        scopeCurator = 2;
-        side = 1;
-        faction = "UKSFTA_Faction";
-        editorCategory = "UKSFTA_Editor_Cat";
-        editorSubcategory = "UKSFTA_SubCat_Vehicles";
-        
-        // REINFORCED LOGIC:
-        // High armorStructural means it takes more hits to die.
-        // Moderate armor/minimalHit means bullets always cause some damage.
-        armor = 200;           // Doubled base health
-        armorStructural = 10;  // Tripled (Original is ~2). This is the "Triple Durability"
-        
-        class HitPoints {
-            // Glass: Fragile (Always breaks)
-            class HitGlass1 { armor = 0.1; minimalHit = 0.001; passThrough = 0; };
-            class HitGlass2: HitGlass1 {};
-            class HitGlass3: HitGlass1 {};
-            class HitGlass4: HitGlass1 {};
-            class HitGlass5: HitGlass1 {};
-            class HitGlass6: HitGlass1 {};
-            class HitGlass7: HitGlass1 {};
-            class HitGlass8: HitGlass1 {};
-
-            // Components: Vulnerable but tough (Threshold: 1.0 damage)
-            // Even an ACE 5.56mm round at 800m will still cause damage.
-            class HitBody { armor = 2; minimalHit = 0.005; passThrough = 0.1; };
-            class HitEngine { armor = 2; minimalHit = 0.005; passThrough = 0.1; }; 
-            class HitFuel { armor = 2; minimalHit = 0.005; passThrough = 0.1; };
+        scope = 2; scopeCurator = 2; side = 1; faction = "UKSFTA_Faction";
+        editorCategory = "UKSFTA_Editor_Cat"; editorSubcategory = "UKSFTA_SubCat_Vehicles";
+        armor = 200; armorStructural = 6; damageResistance = 0.004; crewVulnerable = 1;
+        class HitPoints: HitPoints {
+            class HitGlass1: HitGlass1 { armor = 0.1; minimalHit = 0.001; };
+            class HitGlass2: HitGlass2 { armor = 0.1; minimalHit = 0.001; };
+            class HitGlass3: HitGlass3 { armor = 0.1; minimalHit = 0.001; };
+            class HitGlass4: HitGlass4 { armor = 0.1; minimalHit = 0.001; };
+            class HitGlass5: HitGlass5 { armor = 0.1; minimalHit = 0.001; };
+            class HitGlass6: HitGlass6 { armor = 0.1; minimalHit = 0.001; };
+            class HitGlass7: HitGlass7 { armor = 0.1; minimalHit = 0.001; };
+            class HitGlass8: HitGlass8 { armor = 0.1; minimalHit = 0.001; };
+            class HitBody: HitBody { armor = 2; minimalHit = 0.01; };
+            class HitEngine: HitEngine { armor = 2; minimalHit = 0.01; }; 
+            class HitFuel: HitFuel { armor = 2; minimalHit = 0.01; };
         };
     };
 
-    class UKSF_Toyota_HZJ79_Logi: UKSF_Toyota_HZJ79 { displayName = "[UKSF] Toyota J79 (Logistics)"; };
-    class UKSF_Toyota_HZJ79_M240: UKSF_Toyota_HZJ79 { displayName = "[UKSF] Toyota J79 (M240)"; };
-    class UKSF_Toyota_HZJ79_M2: UKSF_Toyota_HZJ79 { displayName = "[UKSF] Toyota J79 (M2)"; };
+    class UKSF_Toyota_HZJ79_Logi: Arlit_TOYOTA_LC_HZJ79_Logi {
+        displayName = "[UKSF] Toyota J79 (Logistics)";
+        scope = 2; scopeCurator = 2; side = 1; faction = "UKSFTA_Faction";
+        editorCategory = "UKSFTA_Editor_Cat"; editorSubcategory = "UKSFTA_SubCat_Vehicles";
+        armor = 200; armorStructural = 6; damageResistance = 0.004; crewVulnerable = 1;
+        class HitPoints: HitPoints {
+            class HitBody: HitBody { armor = 2; minimalHit = 0.01; };
+            class HitEngine: HitEngine { armor = 2; minimalHit = 0.01; }; 
+        };
+    };
+
+    class UKSF_Toyota_HZJ79_M240: Arlit_TOYOTA_LC_HZJ79_M240 {
+        displayName = "[UKSF] Toyota J79 (M240)";
+        scope = 2; scopeCurator = 2; side = 1; faction = "UKSFTA_Faction";
+        editorCategory = "UKSFTA_Editor_Cat"; editorSubcategory = "UKSFTA_SubCat_Vehicles";
+        armor = 200; armorStructural = 6; damageResistance = 0.004; crewVulnerable = 1;
+        class HitPoints: HitPoints {
+            class HitBody: HitBody { armor = 2; minimalHit = 0.01; };
+            class HitEngine: HitEngine { armor = 2; minimalHit = 0.01; }; 
+        };
+    };
+
+    class UKSF_Toyota_HZJ79_M2: Arlit_TOYOTA_LC_HZJ79_M2 {
+        displayName = "[UKSF] Toyota J79 (M2)";
+        scope = 2; scopeCurator = 2; side = 1; faction = "UKSFTA_Faction";
+        editorCategory = "UKSFTA_Editor_Cat"; editorSubcategory = "UKSFTA_SubCat_Vehicles";
+        armor = 200; armorStructural = 6; damageResistance = 0.004; crewVulnerable = 1;
+        class HitPoints: HitPoints {
+            class HitBody: HitBody { armor = 2; minimalHit = 0.01; };
+            class HitEngine: HitEngine { armor = 2; minimalHit = 0.01; }; 
+        };
+    };
 
     // --- UKSF Land Cruiser (Armoured SUV) ---
-    class arlit_200_VX_16;
     class UKSF_LC200_VX_16: arlit_200_VX_16 {
         displayName = "[UKSF] Land Cruiser VX '16";
-        scope = 2;
-        scopeCurator = 2;
-        side = 1;
-        faction = "UKSFTA_Faction";
-        editorCategory = "UKSFTA_Editor_Cat";
-        editorSubcategory = "UKSFTA_SubCat_Vehicles";
-        
-        armor = 450; 
-        armorStructural = 15; // Extremely tanky health pool
-        
-        class HitPoints {
-            // SUV Glass (Threshold: 4.5 damage - 5.56 cracks it easily)
-            class HitGlass1 { armor = 1.0; minimalHit = 0.01; passThrough = 0; };
-            class HitGlass2: HitGlass1 {};
-            class HitGlass3: HitGlass1 {};
-            class HitGlass4: HitGlass1 {};
-            class HitGlass5: HitGlass1 {};
-            class HitGlass6: HitGlass1 {};
-
-            // SUV Components (Threshold: 4.5 damage - 5.56 damages it slowly)
-            class HitBody { armor = 4; minimalHit = 0.01; passThrough = 0.1; };
-            class HitEngine { armor = 4; minimalHit = 0.01; passThrough = 0.05; }; 
-            class HitFuel { armor = 4; minimalHit = 0.01; passThrough = 0.05; };
+        scope = 2; scopeCurator = 2; side = 1; faction = "UKSFTA_Faction";
+        editorCategory = "UKSFTA_Editor_Cat"; editorSubcategory = "UKSFTA_SubCat_Vehicles";
+        armor = 450; armorStructural = 10; damageResistance = 0.004; crewVulnerable = 1;
+        class HitPoints: HitPoints {
+            class HitGlass1: HitGlass1 { armor = 1.0; minimalHit = 0.01; };
+            class HitGlass2: HitGlass2 { armor = 1.0; minimalHit = 0.01; };
+            class HitGlass3: HitGlass3 { armor = 1.0; minimalHit = 0.01; };
+            class HitGlass4: HitGlass4 { armor = 1.0; minimalHit = 0.01; };
+            class HitGlass5: HitGlass5 { armor = 1.0; minimalHit = 0.01; };
+            class HitGlass6: HitGlass6 { armor = 1.0; minimalHit = 0.01; };
+            class HitBody: HitBody { armor = 4; minimalHit = 0.01; };
+            class HitEngine: HitEngine { armor = 4; minimalHit = 0.01; }; 
+            class HitFuel: HitFuel { armor = 4; minimalHit = 0.01; };
         };
     };
 };
