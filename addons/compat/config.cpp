@@ -27,20 +27,35 @@ class CfgPatches {
     };
 };
 
-class CfgVehicles {
-    class Car_F;
-    class StaticShip;
+class CfgEditorCategories {
+    class UKSFTA_Campaign {
+        displayName = "UKSF - Campaign";
+    };
+};
 
-    // --- UKSF LHA (Unique Variant) ---
+class CfgEditorSubcategories {
+    class UKSFTA_Vehicles {
+        displayName = "Reinforced Vehicles";
+    };
+};
+
+class CfgVehicles {
     class Peral_LHA;
+    class Arlit_TOYOTA_LC_HZJ79;
+    class Arlit_TOYOTA_LC_HZJ79_Logi;
+    class Arlit_TOYOTA_LC_HZJ79_M240;
+    class Arlit_TOYOTA_LC_HZJ79_M2;
+    class arlit_200_VX_16;
+
+    // --- UKSF LHA ---
     class UKSF_LHA: Peral_LHA {
         scope = 2; 
         scopeCurator = 2;
         side = 1;
         faction = "BLU_F";
-        editorSubcategory = "EdSubcat_Boats";
+        editorCategory = "UKSFTA_Campaign";
+        editorSubcategory = "UKSFTA_Vehicles";
         displayName = "[UKSF] LHA"; 
-        editorPreview = "\A3\EditorPreviews_F\Data\CfgVehicles\Default\default_editorPreview.paa";
         Aircraft[] = {"fza_ah64d_b2e","TF373_RAF_HC5","vtx_MH60M","UK3CB_BAF_Wildcat_AH1_TRN_8A_Tropical"};
         Amphibious[] = { "", "", "" };
         Boats[] = {{"rhsgref_hidf_assault_boat",8,1,0.2},{"UK3CB_BAF_RHIB_HMG_MTP_RM",9,1.2,2},{"UK3CB_BAF_RHIB_GPMG_MTP_RM",9,1.2,2}};
@@ -48,90 +63,93 @@ class CfgVehicles {
         hiddenSelectionsTextures[] = {"Peral_LHA\data\clear_empty_ca.paa","Peral_LHA\data\clear_empty_ca.paa","Peral_LHA\data\clear_empty_ca.paa","\A3\Data_F\Flags\flag_uk_co.paa","Peral_LHA\data\clear_empty_ca.paa"};
     };
 
-    // --- UKSF Toyota Variants ---
-    class Arlit_TOYOTA_LC_HZJ79;
+    // --- Toyota Technical Unarmed ---
     class UKSFTA_TOYOTA_HZJ79_Tough: Arlit_TOYOTA_LC_HZJ79 {
         displayName = "[UKSF] Toyota J79";
         scope = 2;
         scopeCurator = 2;
         side = 1;
         faction = "BLU_F";
-        editorSubcategory = "EdSubcat_Cars";
-        armor = 300;
-        armorStructural = 8;
+        editorCategory = "UKSFTA_Campaign";
+        editorSubcategory = "UKSFTA_Vehicles";
+        armor = 400;
+        armorStructural = 10;
         class HitPoints {
-            class HitBody { armor = 30; minimalHit = 0.1; passThrough = 0.1; };
-            class HitEngine { armor = 40; minimalHit = 0.3; passThrough = 0.05; };
-            class HitFuel { armor = 40; minimalHit = 0.3; passThrough = 0.05; };
+            class HitBody { armor = 40; minimalHit = 0.1; passThrough = 0.1; };
+            class HitEngine { armor = 50; minimalHit = 0.4; passThrough = 0.05; }; 
+            class HitFuel { armor = 50; minimalHit = 0.4; passThrough = 0.05; };
         };
     };
 
-    class Arlit_TOYOTA_LC_HZJ79_Logi;
+    // --- Toyota Technical Logi ---
     class UKSFTA_TOYOTA_HZJ79_Logi_Tough: Arlit_TOYOTA_LC_HZJ79_Logi {
         displayName = "[UKSF] Toyota J79 (Logistics)";
         scope = 2;
         scopeCurator = 2;
         side = 1;
         faction = "BLU_F";
-        editorSubcategory = "EdSubcat_Cars";
-        armor = 300;
-        armorStructural = 8;
+        editorCategory = "UKSFTA_Campaign";
+        editorSubcategory = "UKSFTA_Vehicles";
+        armor = 400;
+        armorStructural = 10;
         class HitPoints {
-            class HitBody { armor = 30; minimalHit = 0.1; passThrough = 0.1; };
-            class HitEngine { armor = 40; minimalHit = 0.3; passThrough = 0.05; };
-            class HitFuel { armor = 40; minimalHit = 0.3; passThrough = 0.05; };
+            class HitBody { armor = 40; minimalHit = 0.1; passThrough = 0.1; };
+            class HitEngine { armor = 50; minimalHit = 0.4; passThrough = 0.05; }; 
+            class HitFuel { armor = 50; minimalHit = 0.4; passThrough = 0.05; };
         };
     };
 
-    class Arlit_TOYOTA_LC_HZJ79_M240;
+    // --- Toyota Technical M240 ---
     class UKSFTA_TOYOTA_HZJ79_M240_Tough: Arlit_TOYOTA_LC_HZJ79_M240 {
         displayName = "[UKSF] Toyota J79 (M240)";
         scope = 2;
         scopeCurator = 2;
         side = 1;
         faction = "BLU_F";
-        editorSubcategory = "EdSubcat_Cars";
-        armor = 300;
-        armorStructural = 8;
+        editorCategory = "UKSFTA_Campaign";
+        editorSubcategory = "UKSFTA_Vehicles";
+        armor = 400;
+        armorStructural = 10;
         class HitPoints {
-            class HitBody { armor = 30; minimalHit = 0.1; passThrough = 0.1; };
-            class HitEngine { armor = 40; minimalHit = 0.3; passThrough = 0.05; };
-            class HitFuel { armor = 40; minimalHit = 0.3; passThrough = 0.05; };
+            class HitBody { armor = 40; minimalHit = 0.1; passThrough = 0.1; };
+            class HitEngine { armor = 50; minimalHit = 0.4; passThrough = 0.05; }; 
+            class HitFuel { armor = 50; minimalHit = 0.4; passThrough = 0.05; };
         };
     };
 
-    class Arlit_TOYOTA_LC_HZJ79_M2;
+    // --- Toyota Technical M2 ---
     class UKSFTA_TOYOTA_HZJ79_M2_Tough: Arlit_TOYOTA_LC_HZJ79_M2 {
         displayName = "[UKSF] Toyota J79 (M2)";
         scope = 2;
         scopeCurator = 2;
         side = 1;
         faction = "BLU_F";
-        editorSubcategory = "EdSubcat_Cars";
-        armor = 300;
-        armorStructural = 8;
+        editorCategory = "UKSFTA_Campaign";
+        editorSubcategory = "UKSFTA_Vehicles";
+        armor = 400;
+        armorStructural = 10;
         class HitPoints {
-            class HitBody { armor = 30; minimalHit = 0.1; passThrough = 0.1; };
-            class HitEngine { armor = 40; minimalHit = 0.3; passThrough = 0.05; };
-            class HitFuel { armor = 40; minimalHit = 0.3; passThrough = 0.05; };
+            class HitBody { armor = 40; minimalHit = 0.1; passThrough = 0.1; };
+            class HitEngine { armor = 50; minimalHit = 0.4; passThrough = 0.05; }; 
+            class HitFuel { armor = 50; minimalHit = 0.4; passThrough = 0.05; };
         };
     };
 
-    // --- UKSF Land Cruiser Variant ---
-    class arlit_200_VX_16;
+    // --- Land Cruiser Armoured ---
     class UKSFTA_LC200_VX_16_Tough: arlit_200_VX_16 {
         displayName = "[UKSF] Land Cruiser VX '16";
         scope = 2;
         scopeCurator = 2;
         side = 1;
         faction = "BLU_F";
-        editorSubcategory = "EdSubcat_Cars";
-        armor = 550;
-        armorStructural = 10;
+        editorCategory = "UKSFTA_Campaign";
+        editorSubcategory = "UKSFTA_Vehicles";
+        armor = 650;
+        armorStructural = 12;
         class HitPoints {
-            class HitBody { armor = 50; minimalHit = 0.2; passThrough = 0.1; };
-            class HitEngine { armor = 60; minimalHit = 0.5; passThrough = 0.05; };
-            class HitFuel { armor = 60; minimalHit = 0.5; passThrough = 0.05; };
+            class HitBody { armor = 60; minimalHit = 0.2; passThrough = 0.1; };
+            class HitEngine { armor = 70; minimalHit = 0.6; passThrough = 0.05; }; 
+            class HitFuel { armor = 70; minimalHit = 0.6; passThrough = 0.05; };
         };
     };
 };
