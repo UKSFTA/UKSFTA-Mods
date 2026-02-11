@@ -5,35 +5,7 @@
 class CfgPatches {
     class UKSFTA_Mods_Compat {
         name = "UKSF Taskforce Alpha Mods - Compatibility & Fixes";
-        units[] = {"UKSF_LHA"};
-        weapons[] = {};
-        requiredVersion = 1.62;
-        requiredAddons[] = {
-            "UKSFTA_Mods_Main",
-            "Peral_LHA",
-            "Arlit_Toyota",
-            "rhsusf_c_weapons",
-            "rhsusf_main",
-            "rhsusf_c_identity"
-        };
-        author = "UKSF Taskforce Alpha Team";
-        authors[] = {"UKSF Taskforce Alpha Team"};
-        version = QUOTE(MAJOR.MINOR.PATCHLVL);
-        versionStr = QUOTE(MAJOR.MINOR.PATCHLVL);
-        versionAr[] = {MAJOR,MINOR,PATCHLVL};
-    };
-};
-
-class CfgPatches {
-    class UKSFTA_Mods_Compat {
-        name = "UKSF Taskforce Alpha Mods - Compatibility & Fixes";
-        units[] = {
-            "UKSF_LHA",
-            "UKSFTA_TOYOTA_HZJ79_Tough",
-            "UKSFTA_TOYOTA_HZJ79_M240_Tough",
-            "UKSFTA_TOYOTA_HZJ79_M2_Tough",
-            "UKSFTA_TOYOTA_HZJ79_Logi_Tough"
-        };
+        units[] = {};
         weapons[] = {};
         requiredVersion = 1.62;
         requiredAddons[] = {
@@ -76,11 +48,11 @@ class CfgVehicles {
         scope = 2;
         side = 1; // BLUFOR
         faction = "BLU_F";
-        armor = 800;          // Doubled health
-        armorStructural = 15; // Extremely resistant to one-shots
+        armor = 800;          
+        armorStructural = 15; 
         class HitPoints {
             class HitBody { armor = 50; minimalHit = 0.1; passThrough = 0.1; };
-            class HitEngine { armor = 60; minimalHit = 0.8; passThrough = 0.05; }; // Needs heavy fire to stop
+            class HitEngine { armor = 60; minimalHit = 0.8; passThrough = 0.05; }; 
             class HitFuel { armor = 60; minimalHit = 0.8; passThrough = 0.05; };
         };
     };
@@ -129,14 +101,4 @@ class CfgVehicles {
             class HitFuel { armor = 60; minimalHit = 0.8; passThrough = 0.05; };
         };
     };
-};
-
-// Weapons Patches
-class CfgWeapons {
-    // Placeholder for weapon patches
-};
-
-// Ammo Patches
-class CfgAmmo {
-    // Placeholder for ammo patches
 };
