@@ -5,7 +5,7 @@
 class CfgPatches {
     class UKSFTA_Mods_Compat {
         name = "UKSF Taskforce Alpha Mods - Compatibility & Fixes";
-        units[] = {}; // Hook will sync these
+        units[] = {"Peral_LHA","Arlit_TOYOTA_LC_HZJ79","Arlit_TOYOTA_LC_HZJ79_Logi","Arlit_TOYOTA_LC_HZJ79_M240","Arlit_TOYOTA_LC_HZJ79_M2","arlit_200_VX_16"}; // Hook will sync these
         weapons[] = {};
         requiredVersion = 1.62;
         requiredAddons[] = {
