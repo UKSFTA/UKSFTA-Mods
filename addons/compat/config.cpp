@@ -80,12 +80,6 @@ class CfgVehicles {
             class HitRF2Wheel { armor = 20; minimalHit = 0.1; };
         };
     };
-
-    // Variants automatically inherit the new base values
-    class Arlit_TOYOTA_LC_HZJ79;
-    class Arlit_TOYOTA_LC_HZJ79_M240;
-    class Arlit_TOYOTA_LC_HZJ79_M2;
-    class Arlit_TOYOTA_LC_HZJ79_Logi;
 };
 
 // Weapons Patches
