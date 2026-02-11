@@ -18,7 +18,9 @@ class CfgPatches {
         requiredAddons[] = {
             "UKSFTA_Mods_Main",
             "Arlit_Toyota",
-            "Peral_LHA"
+            "Peral_LHA",
+            "rhsusf_c_weapons",
+            "rhsusf_main"
         };
         author = "UKSF Taskforce Alpha Team";
         authors[] = {"UKSF Taskforce Alpha Team"};
