@@ -52,7 +52,7 @@ class CfgVehicles {
 
     // Toyota Technical Unarmed (Reinforced)
     class UKSFTA_TOYOTA_HZJ79_Tough: Arlit_TOYOTA_LC_HZJ79 {
-        displayName = "[UKSF] Toyota HZJ79 (Reinforced)";
+        displayName = "[UKSF] Toyota J79";
         scope = 2;
         side = 1; // BLUFOR
         faction = "BLU_F";
@@ -67,7 +67,7 @@ class CfgVehicles {
 
     // Toyota Technical Logi (Reinforced)
     class UKSFTA_TOYOTA_HZJ79_Logi_Tough: Arlit_TOYOTA_LC_HZJ79_Logi {
-        displayName = "[UKSF] Toyota HZJ79 Logi (Reinforced)";
+        displayName = "[UKSF] Toyota J79 (Logistics)";
         scope = 2;
         side = 1;
         faction = "BLU_F";
@@ -82,7 +82,7 @@ class CfgVehicles {
 
     // Toyota Technical M240 (Reinforced)
     class UKSFTA_TOYOTA_HZJ79_M240_Tough: Arlit_TOYOTA_LC_HZJ79_M240 {
-        displayName = "[UKSF] Toyota HZJ79 M240 (Reinforced)";
+        displayName = "[UKSF] Toyota J79 (M240)";
         scope = 2;
         side = 1;
         faction = "BLU_F";
@@ -97,7 +97,7 @@ class CfgVehicles {
 
     // Toyota Technical M2 (Reinforced)
     class UKSFTA_TOYOTA_HZJ79_M2_Tough: Arlit_TOYOTA_LC_HZJ79_M2 {
-        displayName = "[UKSF] Toyota HZJ79 M2 (Reinforced)";
+        displayName = "[UKSF] Toyota J79 (M2)";
         scope = 2;
         side = 1;
         faction = "BLU_F";
@@ -112,7 +112,7 @@ class CfgVehicles {
 
     // Land Cruiser Armoured (Reinforced)
     class UKSFTA_LC200_VX_16_Tough: arlit_200_VX_16 {
-        displayName = "[UKSF] Land Cruiser VX '16 (Reinforced)";
+        displayName = "[UKSF] Land Cruiser VX '16";
         scope = 2;
         side = 1;
         faction = "BLU_F";
