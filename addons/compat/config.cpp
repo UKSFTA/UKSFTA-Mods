@@ -52,54 +52,40 @@ class CfgVehicles {
     };
 
     // Arlit Toyota Global Patches (Direct Overwrites)
-    class Arlit_TOYOTA_LC_HZJ79 {
-        armor = 250; // Increased from 120
-        armorStructural = 10; // Increased from 4
+    class Car_F;
+    class Arlit_TOYOTA_BASE: Car_F {
+        armor = 400;          // Significantly tougher base
+        armorStructural = 12; // Prevents "one-shot" component failures
+        damageResistance = 0.01;
+        
         class HitPoints {
             class HitBody {
-                armor = 10; // Increased from 2
-                passThrough = 0.2; // Reduced from 0.5
+                armor = 50;
+                minimalHit = 0.1;
+                passThrough = 0.1;
             };
             class HitEngine {
-                armor = 5; // Increased from 1
+                armor = 40;
+                minimalHit = 0.5; // High threshold: small rounds won't cause smoke
                 passThrough = 0.1;
             };
             class HitFuel {
-                armor = 5; // Increased from 1
+                armor = 40;
+                minimalHit = 0.5;
                 passThrough = 0.1;
             };
+            class HitLFWheel { armor = 20; minimalHit = 0.1; };
+            class HitLF2Wheel { armor = 20; minimalHit = 0.1; };
+            class HitRFWheel { armor = 20; minimalHit = 0.1; };
+            class HitRF2Wheel { armor = 20; minimalHit = 0.1; };
         };
     };
 
-    class Arlit_TOYOTA_LC_HZJ79_M240: Arlit_TOYOTA_LC_HZJ79 {
-        armor = 250;
-        armorStructural = 10;
-        class HitPoints {
-            class HitBody { armor = 10; passThrough = 0.2; };
-            class HitEngine { armor = 5; passThrough = 0.1; };
-            class HitFuel { armor = 5; passThrough = 0.1; };
-        };
-    };
-
-    class Arlit_TOYOTA_LC_HZJ79_M2: Arlit_TOYOTA_LC_HZJ79_M240 {
-        armor = 250;
-        armorStructural = 10;
-        class HitPoints {
-            class HitBody { armor = 10; passThrough = 0.2; };
-            class HitEngine { armor = 5; passThrough = 0.1; };
-            class HitFuel { armor = 5; passThrough = 0.1; };
-        };
-    };
-
-    class Arlit_TOYOTA_LC_HZJ79_Logi: Arlit_TOYOTA_LC_HZJ79 {
-        armor = 250;
-        armorStructural = 10;
-        class HitPoints {
-            class HitBody { armor = 10; passThrough = 0.2; };
-            class HitEngine { armor = 5; passThrough = 0.1; };
-            class HitFuel { armor = 5; passThrough = 0.1; };
-        };
-    };
+    // Variants automatically inherit the new base values
+    class Arlit_TOYOTA_LC_HZJ79;
+    class Arlit_TOYOTA_LC_HZJ79_M240;
+    class Arlit_TOYOTA_LC_HZJ79_M2;
+    class Arlit_TOYOTA_LC_HZJ79_Logi;
 };
 
 // Weapons Patches
