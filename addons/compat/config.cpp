@@ -23,89 +23,59 @@ class CfgPatches {
 class CfgVehicles {
     class Car_F;
 
-    // 1. Comprehensive Patch for Toyota Pickup Base
+    // 1. Toyota Pickup Base - Reinforced (Ignores 5.56mm)
     class Arlit_TOYOTA_BASE: Car_F {
-        armor = 800;
-        armorStructural = 15;
+        armor = 300;
+        armorStructural = 8;
         
-        // Wheel Durability Thresholds
-        wheelDamageThreshold = 0.8;
-        wheelDestroyThreshold = 1.0;
-        wheelDamageRadiusCoef = 0.5;
-        wheelDestroyRadiusCoef = 0.25;
+        wheelDamageThreshold = 0.7;
+        wheelDestroyThreshold = 0.9;
 
         class HitPoints {
-            // Glass - Hardened
-            class HitGlass1 { armor = 2; minimalHit = 0.1; passThrough = 0; };
-            class HitGlass2 { armor = 2; minimalHit = 0.1; passThrough = 0; };
-            class HitGlass3 { armor = 2; minimalHit = 0.1; passThrough = 0; };
-            class HitGlass4 { armor = 2; minimalHit = 0.1; passThrough = 0; };
-            class HitGlass5 { armor = 2; minimalHit = 0.1; passThrough = 0; };
-            class HitGlass6 { armor = 2; minimalHit = 0.1; passThrough = 0; };
-            class HitGlass7 { armor = 2; minimalHit = 0.1; passThrough = 0; };
-            class HitGlass8 { armor = 2; minimalHit = 0.1; passThrough = 0; };
+            class HitGlass1 { armor = 1; minimalHit = 0.05; passThrough = 0; };
+            class HitGlass2: HitGlass1 {};
+            class HitGlass3: HitGlass1 {};
+            class HitGlass4: HitGlass1 {};
+            class HitGlass5: HitGlass1 {};
+            class HitGlass6: HitGlass1 {};
+            class HitGlass7: HitGlass1 {};
+            class HitGlass8: HitGlass1 {};
 
-            // Wheels - Reinforced
-            class HitLFWheel { armor = 20; minimalHit = 0.1; passThrough = 0; };
-            class HitLF2Wheel { armor = 20; minimalHit = 0.1; passThrough = 0; };
-            class HitRFWheel { armor = 20; minimalHit = 0.1; passThrough = 0; };
-            class HitRF2Wheel { armor = 20; minimalHit = 0.1; passThrough = 0; };
+            class HitLFWheel { armor = 10; minimalHit = 0.05; passThrough = 0; };
+            class HitLF2Wheel: HitLFWheel {};
+            class HitRFWheel: HitLFWheel {};
+            class HitRF2Wheel: HitLFWheel {};
 
-            // Core Integrity - Buffed
-            class HitBody {
-                armor = 50;
-                minimalHit = 0.1;
-                passThrough = 0.1;
-            };
-            class HitEngine {
-                armor = 60;
-                minimalHit = 0.8; // High threshold for engine smoke
-                passThrough = 0.05;
-            };
-            class HitFuel {
-                armor = 60;
-                minimalHit = 0.8;
-                passThrough = 0.05;
-            };
+            class HitBody { armor = 30; minimalHit = 0.1; passThrough = 0.1; };
+            class HitEngine { armor = 40; minimalHit = 0.15; passThrough = 0.05; }; // Stops 5.56
+            class HitFuel { armor = 40; minimalHit = 0.15; passThrough = 0.05; };
         };
     };
 
-    // 2. Comprehensive Patch for Land Cruiser 200 Base
+    // 2. Land Cruiser 200 Base - Armoured Spec (Ignores 5.56mm & 7.62mm)
     class arlit_200_16_base: Car_F {
-        armor = 800;
-        armorStructural = 15;
+        armor = 550;
+        armorStructural = 10;
 
         wheelDamageThreshold = 0.8;
         wheelDestroyThreshold = 1.0;
 
         class HitPoints {
             class HitGlass1 { armor = 2; minimalHit = 0.1; passThrough = 0; };
-            class HitGlass2 { armor = 2; minimalHit = 0.1; passThrough = 0; };
-            class HitGlass3 { armor = 2; minimalHit = 0.1; passThrough = 0; };
-            class HitGlass4 { armor = 2; minimalHit = 0.1; passThrough = 0; };
-            class HitGlass5 { armor = 2; minimalHit = 0.1; passThrough = 0; };
-            class HitGlass6 { armor = 2; minimalHit = 0.1; passThrough = 0; };
+            class HitGlass2: HitGlass1 {};
+            class HitGlass3: HitGlass1 {};
+            class HitGlass4: HitGlass1 {};
+            class HitGlass5: HitGlass1 {};
+            class HitGlass6: HitGlass1 {};
 
-            class HitLFWheel { armor = 20; minimalHit = 0.1; passThrough = 0; };
-            class HitLF2Wheel { armor = 20; minimalHit = 0.1; passThrough = 0; };
-            class HitRFWheel { armor = 20; minimalHit = 0.1; passThrough = 0; };
-            class HitRF2Wheel { armor = 20; minimalHit = 0.1; passThrough = 0; };
+            class HitLFWheel { armor = 15; minimalHit = 0.1; passThrough = 0; };
+            class HitLF2Wheel: HitLFWheel {};
+            class HitRFWheel: HitLFWheel {};
+            class HitRF2Wheel: HitLFWheel {};
 
-            class HitBody {
-                armor = 50;
-                minimalHit = 0.1;
-                passThrough = 0.1;
-            };
-            class HitEngine {
-                armor = 60;
-                minimalHit = 0.8;
-                passThrough = 0.05;
-            };
-            class HitFuel {
-                armor = 60;
-                minimalHit = 0.8;
-                passThrough = 0.05;
-            };
+            class HitBody { armor = 50; minimalHit = 0.2; passThrough = 0.1; };
+            class HitEngine { armor = 60; minimalHit = 0.35; passThrough = 0.05; }; // Stops 5.56 and 7.62
+            class HitFuel { armor = 60; minimalHit = 0.35; passThrough = 0.05; };
         };
     };
 };
