@@ -6,37 +6,23 @@
       ],
       "name": "Boat Mod | Paddle Mod",
       "dependencies": [],
-      "updated": "1540647705"
+      "updated": "0"
     },
     "3613999293": {
       "files": [
         "addons/DIS.pbo"
       ],
       "name": "CTR | Dynamic Incognito System",
-      "dependencies": [
-        {
-          "id": "450814997",
-          "name": "CBA_A3"
-        }
-      ],
-      "updated": "1770716658"
+      "dependencies": [],
+      "updated": "0"
     },
     "1736188034": {
       "files": [
         "addons/GR.pbo"
       ],
       "name": "Laws Of War | Guilt & Remembrance",
-      "dependencies": [
-        {
-          "id": "450814997",
-          "name": "CBA_A3"
-        },
-        {
-          "id": "463939057",
-          "name": "ace"
-        }
-      ],
-      "updated": "1693710356"
+      "dependencies": [],
+      "updated": "0"
     },
     "3623437185": {
       "files": [
@@ -44,7 +30,7 @@
       ],
       "name": "AI | AI Paths",
       "dependencies": [],
-      "updated": "1770340048"
+      "updated": "0"
     },
     "3596653038": {
       "files": [
@@ -52,7 +38,7 @@
       ],
       "name": "Boat Mod | LHA",
       "dependencies": [],
-      "updated": "1770481994"
+      "updated": "0"
     },
     "2128773802": {
       "files": [
@@ -60,24 +46,15 @@
       ],
       "name": "Camouflage | RE: Camosys",
       "dependencies": [],
-      "updated": "1600257726"
+      "updated": "0"
     },
     "3604061980": {
       "files": [
         "addons/fnr_rfnerf.pbo"
       ],
       "name": "AI | RHS AFRF Armor Nerf",
-      "dependencies": [
-        {
-          "id": "843425103",
-          "name": "RHSAFRF"
-        },
-        {
-          "id": "450814997",
-          "name": "CBA_A3"
-        }
-      ],
-      "updated": "1769807327"
+      "dependencies": [],
+      "updated": "0"
     },
     "2281685552": {
       "files": [
@@ -85,7 +62,7 @@
       ],
       "name": "Boat Mod | Forward Scan Sonar For Ships",
       "dependencies": [],
-      "updated": "1750961487"
+      "updated": "0"
     }
   }
 }
