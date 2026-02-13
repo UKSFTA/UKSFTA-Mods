@@ -4,65 +4,75 @@
       "files": [
         "addons/A3_Paddle_Mod.pbo"
       ],
-      "name": "Boat Mod | Paddle Mod",
+      "name": "Paddle Mod",
       "dependencies": [],
-      "updated": "0"
+      "updated": "1647323191"
     },
     "3613999293": {
       "files": [
         "addons/DIS.pbo"
       ],
-      "name": "CTR | Dynamic Incognito System",
+      "name": "Dynamic Incognito System",
       "dependencies": [],
-      "updated": "0"
+      "updated": "1769165897"
     },
     "1736188034": {
       "files": [
         "addons/GR.pbo"
       ],
-      "name": "Laws Of War | Guilt & Remembrance",
-      "dependencies": [],
-      "updated": "0"
+      "name": "Guilt & Remembrance",
+      "dependencies": [
+        {
+          "id": "463939057",
+          "name": "Mod 463939057"
+        }
+      ],
+      "updated": "1596147729"
     },
     "3623437185": {
       "files": [
         "addons/Pathing.pbo"
       ],
-      "name": "AI | AI Paths",
+      "name": "AI Paths",
       "dependencies": [],
-      "updated": "0"
+      "updated": "1767609923"
     },
     "3596653038": {
       "files": [
         "addons/Peral_LHA.pbo"
       ],
-      "name": "Boat Mod | LHA",
+      "name": "LHA",
       "dependencies": [],
-      "updated": "0"
+      "updated": "1766728522"
     },
     "2128773802": {
       "files": [
         "addons/real_camosystem.pbo"
       ],
-      "name": "Camouflage | RE: Camosys",
+      "name": "RE: Camosys",
       "dependencies": [],
-      "updated": "0"
+      "updated": "1603606165"
     },
     "3604061980": {
       "files": [
         "addons/fnr_rfnerf.pbo"
       ],
-      "name": "AI | RHS AFRF Armor Nerf",
-      "dependencies": [],
-      "updated": "0"
+      "name": "RHS AFRF Armor Nerf",
+      "dependencies": [
+        {
+          "id": "450814997",
+          "name": "Mod 450814997"
+        }
+      ],
+      "updated": "1769626718"
     },
     "2281685552": {
       "files": [
         "addons/ship_sonar.pbo"
       ],
-      "name": "Boat Mod | Forward Scan Sonar For Ships",
+      "name": "Forward Scan Sonar For Ships",
       "dependencies": [],
-      "updated": "0"
+      "updated": "1611696550"
     }
   }
 }

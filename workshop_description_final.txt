@@ -1,0 +1,28 @@
+[h1]UKSF Task Force Alpha - Mod Collection[/h1]
+
+[b]Essential functional modifications and quality-of-life improvements for UKSFTA.[/b]
+This collection includes our custom internal mods, gameplay adjustments, and essential functional components required for our tactical simulation environment.
+
+[h2]🗺 Included Content[/h2]
+[list]
+ [*] Paddle Mod (Boat Mod) (Workshop ID: 887302721)
+ [*] Dynamic Incognito System (CTR) (Workshop ID: 3613999293)
+ [*] Guilt & Remembrance (Laws Of War) (Workshop ID: 1736188034)
+ [*] AI Paths (AI) (Workshop ID: 3623437185)
+ [*] LHA (Boat Mod) (Workshop ID: 3596653038)
+ [*] RE: Camosys (Camouflage) (Workshop ID: 2128773802)
+ [*] RHS AFRF Armor Nerf (AI) (Workshop ID: 3604061980)
+ [*] Forward Scan Sonar For Ships (Boat Mod) (Workshop ID: 2281685552)
+
+[/list]
+
+[h2]🛠 Requirements[/h2]
+None. (All core requirements handled by unit launcher)
+This pack is intended for use by [b]UKSFTA members[/b] and mission makers.
+Please ensure all necessary dependencies (listed in the launcher) are loaded.
+
+[h2]📡 About UKSFTA[/h2]
+UKSF Task Force Alpha is a tactical realism unit focused on high-quality Arma 3 simulation.
+
+[hr]
+[i]Automated deployment via UKSFTA DevOps Pipeline[/i]
