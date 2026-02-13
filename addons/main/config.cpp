@@ -20,7 +20,7 @@ class CfgPatches {
 // Global Editor Category (The "NATO/CSAT" level tab)
 class CfgEditorCategories {
     class UKSFTA_Editor_Cat {
-        displayName = "UKSF Taskforce Alpha"; 
+        displayName = "UKSF Taskforce Alpha";
     };
 };
 
