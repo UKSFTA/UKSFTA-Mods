@@ -18,7 +18,7 @@ class CfgVehicles {
         displayName = "Flag (Task Force Alpha)";
         editorCategory = "EdCat_Flags";
         editorSubcategory = "EdSubcat_Flags";
-        editorPreview = "z\z\z\uksfta\addons\mods\addons\mods\addons\flags\Files\preview\preview_TFA.jpg";
+        editorPreview = "z\uksfta\addons\flags\Files\preview\preview_TFA.jpg";
         hiddenSelectionsTextures[] = {"\A3\Structures_F\Mil\Flags\Data\Mast_mil_CO.paa"};
         hiddenSelectionsMaterials[] = {"\A3\Structures_F\Mil\Flags\Data\Mast_mil.rvmat"};
         class SimpleObject {
@@ -30,7 +30,7 @@ class CfgVehicles {
             init = "''";
         };
         class EventHandlers {
-            init = "(_this select 0) setFlagTexture 'z\z\z\uksfta\addons\mods\addons\mods\addons\flags\Files\Flags\flag_tfa.paa'";
+            init = "(_this select 0) setFlagTexture 'z\uksfta\addons\flags\Files\Flags\flag_tfa.paa'";
         };
     };
     class Banner_01_F;
@@ -38,7 +38,7 @@ class CfgVehicles {
         displayName = "Banner (Task Force Alpha)";
         editorCategory = "EdCat_Flags";
         editorSubcategory = "EdSubcat_Flags";
-        editorPreview = "z\z\z\uksfta\addons\mods\addons\mods\addons\flags\Files\preview\preview_TFA.jpg";
-        hiddenSelectionsTextures[] = {"z\z\z\uksfta\addons\mods\addons\mods\addons\flags\Files\Flags\flag_tfa.paa"};
+        editorPreview = "z\uksfta\addons\flags\Files\preview\preview_TFA.jpg";
+        hiddenSelectionsTextures[] = {"z\uksfta\addons\flags\Files\Flags\flag_tfa.paa"};
     };
 };
