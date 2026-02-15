@@ -11,12 +11,6 @@ class CfgPatches {
         requiredAddons[] = {
             "UKSFTA_Mods_Main", // Load main first to establish categories
             "Peral_LHA",
-            "rhsusf_c_weapons",
-            "rhsusf_main",
-            "rhsusf_c_mrzr",
-            "uk3cb_baf_vehicles",
-            "vtx_factions_us",
-            "fza_ah64_weapons"
         };
         author = "UKSF Taskforce Alpha Team";
         authors[] = {"UKSF Taskforce Alpha Team"};
