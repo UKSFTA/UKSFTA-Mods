@@ -5,93 +5,110 @@ import json
 import datetime
 import urllib.request
 import urllib.error
+import argparse
+import math
 
-def send_discord_notification(webhook_url, content=None, embed=None):
-    if not webhook_url:
-        return # Silent exit if no webhook
+try:
+    from rich.console import Console
+    HAS_RICH = True
+except ImportError:
+    HAS_RICH = False
 
+def format_size(size_bytes):
+    if size_bytes == 0: return "0 B"
+    size_name = ("B", "KB", "MB", "GB", "TB")
+    i = int(math.floor(math.log(size_bytes, 1024)))
+    p = math.pow(1024, i)
+    s = round(size_bytes / p, 2)
+    return "%s %s" % (s, size_name[i])
+
+def send_discord_notification(webhook_url, content=None, embed=None, dry_run=False):
     payload = {}
     if content: payload["content"] = content
     if embed: payload["embeds"] = [embed]
+    
+    if dry_run:
+        print("\n--- 🕵️ DISCORD DRY-RUN PREVIEW ---")
+        if HAS_RICH:
+            from rich.syntax import Syntax
+            json_str = json.dumps(payload, indent=2)
+            # Use Syntax without line numbers for a cleaner unit-standard preview
+            syntax = Syntax(json_str, "json", theme="monokai", word_wrap=True)
+            Console().print(syntax)
+        else:
+            print(json.dumps(payload, indent=2))
+        print("---------------------------------\n")
+        return
 
+    if not webhook_url: return
     try:
-        req = urllib.request.Request(
-            webhook_url,
-            data=json.dumps(payload).encode('utf-8'),
-            headers={'Content-Type': 'application/json', 'User-Agent': 'Mozilla/5.0'}
-        )
+        req = urllib.request.Request(webhook_url, data=json.dumps(payload).encode('utf-8'), headers={'Content-Type': 'application/json', 'User-Agent': 'Mozilla/5.0'})
         with urllib.request.urlopen(req): pass
-    except: pass
+    except Exception as e: print(f"Failed: {e}")
 
 def main():
+    parser = argparse.ArgumentParser(description="UKSFTA Discord Notifier")
+    parser.add_argument("--message")
+    parser.add_argument("--type", choices=["update", "release", "alert"], default="update")
+    parser.add_argument("--title")
+    parser.add_argument("--impact", help="JSON string of modpack impact report")
+    parser.add_argument("--dry-run", action="store_true", help="Preview notification without sending")
+    args = parser.parse_args()
+
     webhook_url = os.getenv("DISCORD_WEBHOOK")
-    if not webhook_url:
+    if not webhook_url and not args.dry_run:
         print("Skipping: DISCORD_WEBHOOK not set.")
         sys.exit(0)
 
-    event_name = os.getenv("GITHUB_EVENT_NAME", "unknown")
-    repo = os.getenv("GITHUB_REPOSITORY", "unknown")
-    
-    # Defaults
-    title = f"Event: {event_name}"
-    description = f"Repository: **{repo}**"
-    url = ""
-    color = 0x3498db # Blue generic
-    
-    # Load Event Payload
-    event_path = os.getenv("GITHUB_EVENT_PATH")
-    payload = {}
-    if event_path and os.path.exists(event_path):
-        with open(event_path, "r") as f:
-            payload = json.load(f)
+    # 1. High-Fidelity Impact Reporting
+    if args.impact:
+        impact = json.loads(args.impact)
+        project_name = os.path.basename(os.getcwd())
+        
+        embed = {
+            "title": f"📦 Modpack Expansion: {project_name}",
+            "description": f"New content has been integrated into the **{project_name}** repository.",
+            "color": 0x3498db,
+            "fields": [],
+            "footer": {"text": "UKSFTA DevOps | Modset Intelligence"},
+            "timestamp": datetime.datetime.now(datetime.UTC).isoformat()
+        }
 
-    # 1. RELEASES
-    if event_name == "push" and os.getenv("GITHUB_REF", "").startswith("refs/tags/"):
-        tag = os.getenv("GITHUB_REF", "").replace("refs/tags/", "")
-        title = f"🚀 Release Deployed: {tag}"
-        description = f"A new version of **{repo}** has been released."
-        color = 0x2ecc71 # Green
-        url = f"https://github.com/{repo}/releases/tag/{tag}"
+        if impact["added"]:
+            added_list = ""
+            for mod in impact["added"]:
+                name_str = f"**{mod['name']}**"
+                if mod.get("is_dependency"):
+                    name_str += " [italic](Dependency)[/italic]"
+                added_list += f" • {name_str} ({format_size(mod['size'])})\n"
+                if mod["deps"]:
+                    deps = ", ".join(mod["deps"][:5]) + ("..." if len(mod["deps"]) > 5 else "")
+                    added_list += f"   [dim]Deps: {deps}[/dim]\n"
+            embed["fields"].append({"name": "🆕 Added Content", "value": added_list, "inline": False})
 
-    # 2. ISSUES
-    elif event_name == "issues":
-        action = payload.get("action")
-        issue = payload.get("issue", {})
-        title = f"🐛 Issue {action.capitalize()}: #{issue.get('number')} {issue.get('title')}"
-        description = f"**{repo}**\nUser: {issue.get('user', {}).get('login')}\n\n{issue.get('body', '')[:200]}..."
-        url = issue.get("html_url")
-        color = 0xe67e22 # Orange
-        if action == "closed": color = 0x95a5a6 # Gray
+        if impact["removed"]:
+            removed_list = ", ".join(impact["removed"])
+            embed["fields"].append({"name": "🗑️ Removed Content", "value": removed_list, "inline": False})
 
-    # 3. PULL REQUESTS
-    elif event_name == "pull_request":
-        action = payload.get("action")
-        pr = payload.get("pull_request", {})
-        title = f"🔀 PR {action.capitalize()}: #{pr.get('number')} {pr.get('title')}"
-        description = f"**{repo}**\nUser: {pr.get('user', {}).get('login')}\n\n{pr.get('body', '')[:200]}..."
-        url = pr.get("html_url")
-        color = 0x9b59b6 # Purple
-        if action == "closed" and pr.get("merged"):
-            title = f"🔀 PR Merged: #{pr.get('number')} {pr.get('title')}"
-            color = 0x2ecc71
-        elif action == "closed":
-            color = 0x95a5a6
+        # Summary Metrics
+        stats = f"**New Data:** {format_size(impact['added_size'])}\n"
+        stats += f"**Total Modset Size:** {format_size(impact['total_size'])}"
+        embed["fields"].append({"name": "📊 Resource Impact", "value": stats, "inline": True})
 
-    else:
-        # Ignore other events (like standard push/build)
-        print("Skipping non-target event.")
-        sys.exit(0)
+        send_discord_notification(webhook_url, embed=embed, dry_run=args.dry_run)
+        if not args.dry_run: print("✅ Impact notification sent.")
+        return
 
-    embed = {
-        "title": title,
-        "description": description,
-        "url": url,
-        "color": color,
-        "footer": {"text": "UKSFTA DevOps | Platinum Suite"},
-        "timestamp": datetime.datetime.utcnow().isoformat()
-    }
-    
-    send_discord_notification(webhook_url, embed=embed)
+    # 2. Manual/Generic Logic
+    if args.message or args.title:
+        title = args.title if args.title else f"UKSFTA Development {args.type.capitalize()}"
+        color = 0x3498db
+        if args.type == "release": color = 0x2ecc71
+        elif args.type == "alert": color = 0xe74c3c
+        embed = {"title": title, "description": args.message or "Update in progress.", "color": color, "footer": {"text": "UKSFTA DevOps"}, "timestamp": datetime.datetime.utcnow().isoformat()}
+        send_discord_notification(webhook_url, embed=embed, dry_run=args.dry_run)
+        if not args.dry_run: print("✅ Manual notification sent.")
+        return
 
 if __name__ == "__main__":
     main()
