@@ -13,6 +13,7 @@ This collection includes our custom internal mods, gameplay adjustments, and ess
  [*] RE: Camosys (Camouflage) (Workshop ID: 2128773802)
  [*] RHS AFRF Armor Nerf (AI) (Workshop ID: 3604061980)
  [*] Forward Scan Sonar For Ships (Boat Mod) (Workshop ID: 2281685552)
+ [*] Dagger Mod for ACE (Camouflage) (Workshop ID: 1105446708)
 
 [/list]
 
