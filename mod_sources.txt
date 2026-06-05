@@ -8,8 +8,15 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=1736188034 # Laws Of War 
 https://steamcommunity.com/sharedfiles/filedetails/?id=3623437185 # AI | AI Paths
 https://steamcommunity.com/sharedfiles/filedetails/?id=3596653038 # Boat Mod | LHA
 https://steamcommunity.com/sharedfiles/filedetails/?id=2128773802 # Camouflage | RE: Camosys
-https://steamcommunity.com/sharedfiles/filedetails/?id=3604061980 # AI | RHS AFRF Armor Nerf
 https://steamcommunity.com/sharedfiles/filedetails/?id=2281685552 # Boat Mod | Forward Scan Sonar For Ships
+https://steamcommunity.com/sharedfiles/filedetails/?id=1105446708 # Camouflage | Dagger Mod for ACE
+https://steamcommunity.com/sharedfiles/filedetails/?id=2888888564 # Equipment | Advanced Equipment
+https://steamcommunity.com/sharedfiles/filedetails/?id=3634756604 # Editor Extention | EP Ground Textures
+https://steamcommunity.com/sharedfiles/filedetails/?id=2822758266 # Editor Extention | Deformer
+https://steamcommunity.com/sharedfiles/filedetails/?id=3690291228 # Mechanics | RCiv - Realistic Civilians
+
+# For Arbo
+https://steamcommunity.com/sharedfiles/filedetails/?id=3571982186 # Utility | Gunmetal Grooves
 
 [ignore]
 # List mods to exclude from download/sync below
