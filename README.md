@@ -1,25 +1,26 @@
 # UKSFTA Mods
 
-**Core gameplay modifications and asset collection for UKSF Taskforce Alpha.**
+Core gameplay modifications and asset collection for UKSF Taskforce Alpha.
 
-This repository serves as the central hub for our unit's custom internal modifications, including uniform patches, flags, and essential QoL adjustments.
+This repository is the central hub for the unit's custom internal modifications,
+including uniform patches, flags, and quality-of-life adjustments.
 
-## 🛠 Features
+## Features
 
-- **Standardized VFS**: Unified loading under the `z\uksfta` namespace.
-- **Optimized Assets**: Binarized textures and models for high-performance simulation.
-- **Unit Identity**: Comprehensive collection of Taskforce Alpha flags and insignia.
+- Standardised VFS: Unified loading under the `z\\uksfta` namespace.
+- Optimised Assets: Binarised textures and models for simulation performance.
+- Unit Identity: Collection of Taskforce Alpha flags and insignia.
 
-## 📋 Requirements
+## Requirements
 
-- **CBA_A3**: Community Base Addons.
-- **ACE3**: Advanced Combat Environment.
+- CBA_A3: Community Base Addons.
+- ACE3: Advanced Combat Environment.
 
-## 🔧 Technical Logic
+## Technical
 
-- **VFS Prefix**: `z\uksfta\core`
-- **Build System**: Automated via [**UKSFTA-Tools**](https://github.com/UKSFTA/UKSFTA-Tools).
+- VFS Prefix: `z\\uksfta\\core`
+- Build System: Automated via [UKSFTA-Tools](https://github.com/UKSFTA/UKSFTA-Tools).
 
-## ⚖ License
+## Licence
 
-This project is licensed under the **Arma Public License - Share Alike (APL-SA)**. See the `LICENSE` file for full details.
+This project is licensed under the Arma Public License (APL). See the LICENSE file.
