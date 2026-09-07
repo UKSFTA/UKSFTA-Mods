@@ -8,14 +8,6 @@
       "dependencies": [],
       "updated": "1647323191"
     },
-    "3613999293": {
-      "files": [
-        "addons/DIS.pbo"
-      ],
-      "name": "Dynamic Incognito System",
-      "dependencies": [],
-      "updated": "1776530484"
-    },
     "1736188034": {
       "files": [
         "addons/GR.pbo"
@@ -28,22 +20,6 @@
         }
       ],
       "updated": "1596147729"
-    },
-    "3623437185": {
-      "files": [
-        "addons/Pathing.pbo"
-      ],
-      "name": "AI Paths",
-      "dependencies": [],
-      "updated": "1779809360"
-    },
-    "3596653038": {
-      "files": [
-        "addons/Peral_LHA.pbo"
-      ],
-      "name": "LHA",
-      "dependencies": [],
-      "updated": "1766728522"
     },
     "2128773802": {
       "files": [
@@ -60,26 +36,6 @@
       "name": "Forward Scan Sonar For Ships",
       "dependencies": [],
       "updated": "1611696550"
-    },
-    "1105446708": {
-      "files": [
-        "addons/a3_dgr_ammo.pbo",
-        "addons/a3_dgr_attachments.pbo",
-        "addons/a3_dgr_equipment.pbo",
-        "addons/a3_dgr_factions.pbo",
-        "addons/a3_dgr_magazines.pbo",
-        "addons/a3_dgr_scopes.pbo",
-        "addons/a3_dgr_vehicles.pbo",
-        "addons/a3_dgr_weapons.pbo"
-      ],
-      "name": "Dagger Mod for ACE",
-      "dependencies": [
-        {
-          "id": "450814997",
-          "name": "Mod 450814997"
-        }
-      ],
-      "updated": "1694018628"
     },
     "2888888564": {
       "files": [
@@ -100,32 +56,68 @@
       ],
       "updated": "1765940690"
     },
-    "3634756604": {
+    "3164316521": {
       "files": [
-        "addons/ep_ground_textures_2.pbo",
-        "addons/ep_ground_textures_4.pbo",
-        "addons/ep_ground_textures_blocks.pbo",
-        "addons/ep_ground_textures.pbo"
+        "addons/RS_Equip_Retention.pbo"
       ],
-      "name": "EP Ground Textures",
+      "name": "1 Troop Retention Lanyards",
       "dependencies": [],
-      "updated": "1776835635"
+      "updated": "1742506895"
     },
-    "2822758266": {
+    "3303750651": {
       "files": [
-        "addons/GF_Deformer.pbo"
+        "addons/RS_Sys_Compliance.pbo"
       ],
-      "name": "Deformer",
-      "dependencies": [],
-      "updated": "1667139282"
+      "name": "1 Troop Compliance System",
+      "dependencies": [
+        {
+          "id": "1779063631",
+          "name": "Zeus Enhanced"
+        },
+        {
+          "id": "463939057",
+          "name": "Mod 463939057"
+        }
+      ],
+      "updated": "1722905649"
     },
-    "3690291228": {
+    "3462231740": {
       "files": [
-        "addons/rciv.pbo"
+        "addons/RS_Sys_Chemlights.pbo"
       ],
-      "name": "RCiv - Realistic Civilians",
+      "name": "1 Troop Chemlight System",
       "dependencies": [],
-      "updated": "1779912803"
+      "updated": "1744414673"
+    },
+    "3613999293": {
+      "files": [
+        "addons/DIS.pbo"
+      ],
+      "name": "Dynamic Incognito System",
+      "dependencies": [],
+      "updated": "1776530484"
+    },
+    "3741044939": {
+      "files": [
+        "addons/DISP_compat.pbo",
+        "addons/DISP_main.pbo"
+      ],
+      "name": "Dynamic Incognito System Patch",
+      "dependencies": [
+        {
+          "id": "450814997",
+          "name": "Mod 450814997"
+        }
+      ],
+      "updated": "1780934137"
+    },
+    "2482773252": {
+      "files": [
+        "addons/mttb_main.pbo"
+      ],
+      "name": "Military Tandem Tethered Bundle",
+      "dependencies": [],
+      "updated": "1677290848"
     },
     "3571982186": {
       "files": [

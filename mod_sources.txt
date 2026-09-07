@@ -3,17 +3,22 @@
 # Example: 450814997 # Weekend Ops, Core
 
 https://steamcommunity.com/sharedfiles/filedetails/?id=887302721 # Boat Mod | Paddle Mod
-https://steamcommunity.com/sharedfiles/filedetails/?id=3613999293 # CTR | Dynamic Incognito System
 https://steamcommunity.com/sharedfiles/filedetails/?id=1736188034 # Laws Of War | Guilt & Remembrance
-https://steamcommunity.com/sharedfiles/filedetails/?id=3623437185 # AI | AI Paths
-https://steamcommunity.com/sharedfiles/filedetails/?id=3596653038 # Boat Mod | LHA
 https://steamcommunity.com/sharedfiles/filedetails/?id=2128773802 # Camouflage | RE: Camosys
 https://steamcommunity.com/sharedfiles/filedetails/?id=2281685552 # Boat Mod | Forward Scan Sonar For Ships
-https://steamcommunity.com/sharedfiles/filedetails/?id=1105446708 # Camouflage | Dagger Mod for ACE
 https://steamcommunity.com/sharedfiles/filedetails/?id=2888888564 # Equipment | Advanced Equipment
-https://steamcommunity.com/sharedfiles/filedetails/?id=3634756604 # Editor Extention | EP Ground Textures
-https://steamcommunity.com/sharedfiles/filedetails/?id=2822758266 # Editor Extention | Deformer
-https://steamcommunity.com/sharedfiles/filedetails/?id=3690291228 # Mechanics | RCiv - Realistic Civilians
+
+https://steamcommunity.com/sharedfiles/filedetails/?id=3164316521 # 1 Troop Retention Lanyards
+https://steamcommunity.com/sharedfiles/filedetails/?id=3303750651 # 1 Troop Compliance System
+https://steamcommunity.com/sharedfiles/filedetails/?id=3462231740 # 1 Troop Chemlight System
+
+https://steamcommunity.com/sharedfiles/filedetails/?id=3613999293 # Dynamic Incognito System
+https://steamcommunity.com/sharedfiles/filedetails/?id=3741044939 # Dynamic Incognito System Patch
+
+https://steamcommunity.com/sharedfiles/filedetails/?id=2482773252 # Military Tandem Tethered Bundle
+
+# Temp
+
 
 # For Arbo
 https://steamcommunity.com/sharedfiles/filedetails/?id=3571982186 # Utility | Gunmetal Grooves
